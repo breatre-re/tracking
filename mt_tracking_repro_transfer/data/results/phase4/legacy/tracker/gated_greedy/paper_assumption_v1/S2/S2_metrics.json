@@ -1,0 +1,60 @@
+{
+  "audit": {
+    "associations_to_clutter": 1117.0,
+    "associations_to_true": 265.0,
+    "candidates_born_from_clutter": 477.0,
+    "candidates_born_from_true": 12.0,
+    "total_associations": 1382.0,
+    "total_measurements": 1871.0,
+    "unmatched_clutter": 477.0,
+    "unmatched_true_detections": 12.0
+  },
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "input_hash": "d2333933b1dfbe0f893fd7d5d65bf6e78ce4c6dc610572650df9bfa0da2ccdff",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 4264.0,
+    "false_negatives": 0.0,
+    "false_positives": 3944.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 74.0,
+    "matched_detections": 320.0,
+    "mean_position_error": 1.8055877312739164,
+    "mota_like": -11.55625,
+    "position_rmse": 2.1487798291748583,
+    "truth_object_frames": 320.0,
+    "truth_objects_per_frame": 4.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Multiple targets whose straight-line paths cross.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "crossing",
+    "name": "S2",
+    "num_targets": 4,
+    "process_accel_std": 0.08,
+    "seed": 12022,
+    "steps": 80
+  },
+  "runtime_seconds": 0.11990911300017615,
+  "scenario": "S2",
+  "tracker": "gated_greedy"
+}

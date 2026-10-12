@@ -1,0 +1,124 @@
+{
+  "audit": {
+    "associations_to_clutter": 36.0,
+    "associations_to_true": 101.0,
+    "candidates_born_from_clutter": 86.0,
+    "candidates_born_from_true": 3.0,
+    "total_associations": 137.0,
+    "total_measurements": 226.0,
+    "unmatched_clutter": 86.0,
+    "unmatched_true_detections": 3.0
+  },
+  "diagnostics": {
+    "births": 89.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 17.0,
+    "deletions": 72.0,
+    "final_active_tracks": 17.0,
+    "final_confirmed": 5.0,
+    "lost_events": 27.0,
+    "max_concurrent_confirmed": 8.0,
+    "recoveries": 15.0
+  },
+  "distribution": "baseline_distribution",
+  "input_hashes": {
+    "label_hash": "3e57debdeecda2f7fc6ffde9c4985f78865666468d6d6caec7c586849114d789",
+    "measurement_hash": "01aae85f933142fd9514173c6ccc8f3a6c3e818bd406c0407040ae7591f60751",
+    "truth_hash": "ba495d2ea2d47750dfd073f1300a32c67810234f37e5dbd2954211a8274a1cf3"
+  },
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 405.0,
+    "false_negatives": 18.0,
+    "false_positives": 183.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 5.0,
+    "matched_detections": 222.0,
+    "mean_position_error": 1.6835854502713445,
+    "mota_like": 0.14166666666666672,
+    "position_rmse": 2.0025044540309738,
+    "truth_object_frames": 240.0,
+    "truth_objects_per_frame": 3.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the offline evaluator/audit.",
+    "Only missed_increment_mode differs between variants A and B.",
+    "runtime_seconds is wall-clock and not a parity field."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "description": "Controlled missed detections: reduced per-frame detection probability.",
+    "detection_probability": 0.45,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S3",
+    "num_targets": 3,
+    "process_accel_std": 0.08,
+    "seed": 2033,
+    "steps": 80
+  },
+  "runtime_seconds": 0.09985409199907735,
+  "scenario": "S3",
+  "tracker_config": {
+    "filter": {
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "measurement_noise_std": 1.5,
+      "process_accel_std": 0.1
+    },
+    "gate": {
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "physical_gate": 10.0
+    },
+    "kind": "dynamic_score",
+    "lifecycle": {
+      "candidate_expiry": 6,
+      "lost_expiry": 15,
+      "max_missed": 5,
+      "reappearance_reward": 0.0,
+      "report_lost": false
+    },
+    "score": {
+      "confirm_threshold": 1.0,
+      "decay": 0.95,
+      "history_lag": 4,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02
+    }
+  },
+  "variant": "B_documented"
+}

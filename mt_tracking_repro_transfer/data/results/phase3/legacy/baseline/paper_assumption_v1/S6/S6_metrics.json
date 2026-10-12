@@ -1,0 +1,70 @@
+{
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 3988.0,
+    "false_negatives": 2.0,
+    "false_positives": 3830.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 21.0,
+    "matched_detections": 158.0,
+    "mean_position_error": 2.1830652527286074,
+    "mota_like": -23.08125,
+    "position_rmse": 2.9167450362828946,
+    "truth_object_frames": 160.0,
+    "truth_objects_per_frame": 2.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [
+      {
+        "eligible": true,
+        "end": 46,
+        "post_track_id": 306,
+        "pre_track_id": 76,
+        "recovered": false,
+        "start": 30,
+        "target": 1
+      }
+    ],
+    "opportunities": 1.0,
+    "recovery_rate": 0.0,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Two targets; one target has a short detection gap then reappears.",
+    "detection_probability": 0.9,
+    "disappearance": [
+      [
+        1,
+        30,
+        46
+      ]
+    ],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S6",
+    "num_targets": 2,
+    "process_accel_std": 0.08,
+    "seed": 12066,
+    "steps": 80
+  },
+  "runtime_seconds": 0.04475531500065699,
+  "scenario": "S6",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

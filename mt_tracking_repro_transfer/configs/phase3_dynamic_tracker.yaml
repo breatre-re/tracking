@@ -1,0 +1,81 @@
+# Phase 3 tracker configuration: dynamic-score tracker alongside the baseline.
+#
+# All numeric values below are reproduction assumptions unless a value can be
+# verified from the paper/authors. docs/plan/IMPLEMENTATION_SPEC.md Section 6 documents the
+# score recursion and event increments but does not publish lambda_s, lambda_t,
+# S_c, P_B, P_FA or P_D; the gate thresholds and lost-track expiry are Phase 3
+# engineering additions.
+
+schema_version: 1
+
+trackers:
+  baseline:
+    kind: gated_greedy
+    gate: 9.0
+    min_hits: 2
+    max_missed: 5
+
+  dynamic_score:
+    kind: dynamic_score
+    filter:
+      process_accel_std: 0.10
+      measurement_noise_std: 1.5
+      initial_position_var: 0.25
+      initial_velocity_var: 1.0
+    gate:
+      mahalanobis_gate: 9.21   # chi-square 2-DoF 99% quantile (assumption)
+      physical_gate: 10.0      # metres (assumption)
+      lost_gate_scale: 2.5     # wider re-association gate for lost tracks (assumption)
+    score:
+      decay: 0.95              # lambda_s (assumption)
+      history_lag: 4           # lambda_t (assumption)
+      confirm_threshold: 1.0   # S_c (assumption)
+      p_birth: 0.05            # P_B (assumption)
+      p_false_alarm: 0.02      # P_FA (assumption)
+      p_detect: 0.90           # P_D (assumption)
+      missed_increment_mode: documented   # docs/plan/IMPLEMENTATION_SPEC.md formula, kept faithful
+    lifecycle:
+      max_missed: 5
+      candidate_expiry: 6
+      lost_expiry: 15
+      reappearance_reward: 0.0
+      report_lost: false
+
+  # Diagnostic variant: identical except the missed-detection increment uses the
+  # sign-corrected penalty log((1-P_D)/(1-P_FA)) instead of the documented
+  # log((1-P_FA)/(1-P_D)). Included so the effect of the documented-formula sign
+  # can be measured explicitly; not claimed to be the paper's formula.
+  dynamic_score_corrected:
+    kind: dynamic_score
+    filter:
+      process_accel_std: 0.10
+      measurement_noise_std: 1.5
+      initial_position_var: 0.25
+      initial_velocity_var: 1.0
+    gate:
+      mahalanobis_gate: 9.21
+      physical_gate: 10.0
+      lost_gate_scale: 2.5
+    score:
+      decay: 0.95
+      history_lag: 4
+      confirm_threshold: 1.0
+      p_birth: 0.05
+      p_false_alarm: 0.02
+      p_detect: 0.90
+      missed_increment_mode: likelihood_penalty
+    lifecycle:
+      max_missed: 5
+      candidate_expiry: 6
+      lost_expiry: 15
+      reappearance_reward: 0.0
+      report_lost: false
+
+assumptions:
+  - "Filter is a 4D Cartesian [x,y,vx,vy] Kalman filter, not the paper's 5D coordinated-turn range-bearing model."
+  - "Mahalanobis gate (9.21) and physical gate (10 m) are engineering additions."
+  - "Score hyperparameters lambda_s=0.95, lambda_t=4, S_c=1.0, P_B=0.05, P_FA=0.02, P_D=0.90 are chosen values, not paper-verified."
+  - "lost_expiry=15 is an engineering addition to allow same-ID recovery across a short gap."
+  - "reappearance_reward=0.0 means a recovered track uses only the documented association increment."
+  - "dynamic_score uses the docs/plan/IMPLEMENTATION_SPEC.md missed increment log((1-P_FA)/(1-P_D)); with P_D>P_FA this is positive (a documented-formula limitation, reported not silently changed)."
+  - "dynamic_score_corrected is a diagnostic variant using the sign-corrected penalty log((1-P_D)/(1-P_FA)); it is an engineering correction, not a paper-verified formula."

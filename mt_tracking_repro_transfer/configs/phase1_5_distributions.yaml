@@ -1,0 +1,45 @@
+distributions:
+  baseline_distribution:
+    scenario:
+      steps: 80
+      num_targets: 6
+      area_size: 100.0
+      detection_probability: 0.9
+      measurement_std: 1.5
+      clutter_rate: 1.5
+      process_accel_std: 0.08
+      seed: 7
+    target_count_range: [6, 6]
+    assumptions:
+      - "Baseline reference reproduces Phase 1: fixed 6 targets and Poisson clutter_rate=1.5 per frame."
+    datasets:
+      train:
+        samples: 1800
+        seed_start: 20261000
+      test:
+        samples: 200
+        seed_start: 20263000
+
+  paper_assumption_v1:
+    scenario:
+      steps: 80
+      num_targets: 25
+      area_size: 100.0
+      detection_probability: 0.9
+      measurement_std: 1.5
+      clutter_rate: 20.0
+      process_accel_std: 0.08
+      seed: 7
+    target_count_range: [1, 25]
+    assumptions:
+      - "Target count is sampled discrete-uniformly from integers 1 through 25 for every trajectory."
+      - "Table 8 Poisson lambda=20 is interpreted as clutter count per time step."
+      - "The per-time-step interpretation of lambda=20 is a reproduction assumption if the paper does not specify its temporal unit."
+      - "Unspecified scenario parameters retain Phase 1 values; birth/death schedules retain the existing baseline generator."
+    datasets:
+      train:
+        samples: 1800
+        seed_start: 30261000
+      test:
+        samples: 200
+        seed_start: 30263000

@@ -1,0 +1,90 @@
+{
+  "audit": {
+    "associations_to_clutter": 1354.0,
+    "associations_to_true": 100.0,
+    "candidates_born_from_clutter": 187.0,
+    "candidates_born_from_true": 18.0,
+    "total_associations": 1454.0,
+    "total_measurements": 1659.0,
+    "unmatched_clutter": 187.0,
+    "unmatched_true_detections": 18.0
+  },
+  "diagnostics": {
+    "births": 205.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 1.0,
+    "deletions": 185.0,
+    "final_active_tracks": 20.0,
+    "final_confirmed": 1.0,
+    "lost_events": 3.0,
+    "max_concurrent_confirmed": 1.0,
+    "recoveries": 3.0
+  },
+  "distribution": "paper_assumption_v1",
+  "input_hash": "8a713313fc6d63bb5a6fbaa4f67971b75328aa849c3fa3f98cb791cdcb2288fe",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 40.0,
+    "false_negatives": 234.0,
+    "false_positives": 34.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 6.0,
+    "mean_position_error": 8.512723191174478,
+    "mota_like": -0.1166666666666667,
+    "position_rmse": 8.942353001730796,
+    "truth_object_frames": 240.0,
+    "truth_objects_per_frame": 3.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Controlled missed detections: reduced per-frame detection probability.",
+    "detection_probability": 0.45,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S3",
+    "num_targets": 3,
+    "process_accel_std": 0.08,
+    "seed": 12033,
+    "steps": 80
+  },
+  "runtime_seconds": 1.0960803139987547,
+  "scenario": "S3",
+  "tracker": "ctda_dynamic_score"
+}

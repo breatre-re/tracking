@@ -1,0 +1,112 @@
+# Phase 2 evaluation matrix: eight deterministic scenarios x two distributions.
+#
+# Each scenario is resolved against a distribution's ``defaults`` (distribution
+# specific clutter/target assumptions) and any explicit per-scenario override.
+# ``num_targets``, ``motion``, ``lifetimes``, ``disappearance`` and the noise /
+# detection / clutter fields fully determine a scenario. The resolved seed is
+# ``scenarios.<name>.seed + distributions.<name>.seed_offset`` and is recorded in
+# every emitted artifact so a run can be reproduced exactly.
+#
+# Scenario intent (see docs/reports/phase2_report.md):
+#   S0 one target, zero noise and zero clutter
+#   S1 multiple separated, non-crossing targets
+#   S2 crossing targets
+#   S3 controlled missed detections
+#   S4 false alarms / clutter
+#   S5 staggered target births and deaths
+#   S6 one target temporarily missing, then reappearing
+#   S7 25 targets with high clutter (stress case)
+
+schema_version: 1
+
+# Position gate (metres) used by the offline evaluation matcher only.
+# The tracker keeps its own gate from its constructor defaults.
+match_gate: 12.0
+
+distributions:
+  baseline_distribution:
+    seed_offset: 0
+    defaults:
+      steps: 80
+      area_size: 100.0
+      detection_probability: 0.9
+      measurement_std: 1.5
+      clutter_rate: 1.5
+      process_accel_std: 0.08
+  paper_assumption_v1:
+    seed_offset: 10000
+    defaults:
+      steps: 80
+      area_size: 100.0
+      detection_probability: 0.9
+      measurement_std: 1.5
+      clutter_rate: 20.0
+      process_accel_std: 0.08
+
+scenarios:
+  S0:
+    seed: 2000
+    description: "Single target, no measurement/process noise and no clutter."
+    num_targets: 1
+    motion: solo
+    detection_probability: 1.0
+    measurement_std: 0.0
+    process_accel_std: 0.0
+    clutter_rate: 0.0
+
+  S1:
+    seed: 2011
+    description: "Multiple separated targets on non-crossing parallel lanes."
+    num_targets: 5
+    motion: parallel
+
+  S2:
+    seed: 2022
+    description: "Multiple targets whose straight-line paths cross."
+    num_targets: 4
+    motion: crossing
+
+  S3:
+    seed: 2033
+    description: "Controlled missed detections: reduced per-frame detection probability."
+    num_targets: 3
+    motion: parallel
+    detection_probability: 0.45
+
+  S4:
+    seed: 2044
+    description: "False alarms / clutter at a rate above the low-noise baseline."
+    num_targets: 3
+    motion: parallel
+    clutter_rate_by_distribution:
+      baseline_distribution: 5.0
+      paper_assumption_v1: 20.0
+
+  S5:
+    seed: 2055
+    description: "Staggered target births and deaths across the horizon."
+    num_targets: 5
+    motion: parallel
+    lifetimes:
+      - [0, 80]
+      - [0, 80]
+      - [10, 80]
+      - [5, 60]
+      - [20, 70]
+
+  S6:
+    seed: 2066
+    description: "Two targets; one target has a short detection gap then reappears."
+    num_targets: 2
+    motion: parallel
+    disappearance:
+      - target: 1
+        start: 30
+        end: 46
+
+  S7:
+    seed: 2077
+    description: "Stress case: 25 targets with high clutter (lambda=20)."
+    num_targets: 25
+    motion: parallel
+    clutter_rate: 20.0

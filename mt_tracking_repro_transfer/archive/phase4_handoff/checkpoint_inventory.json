@@ -1,0 +1,18 @@
+[
+  {
+    "bundle_path": "checkpoints/row_column_checkpoint.pt",
+    "exists": true,
+    "original_path": "models/phase4/row_column/checkpoint.pt",
+    "sha256": "50b855ba102f3aa4f761530d88e1f0c505706881d5d513ed411da049ff044bf9",
+    "size_bytes": 490308,
+    "variant": "row_column"
+  },
+  {
+    "bundle_path": null,
+    "exists": false,
+    "original_path": "models/phase4/row_column_3ch/checkpoint.pt",
+    "sha256": null,
+    "size_bytes": null,
+    "variant": "row_column_3ch"
+  }
+]

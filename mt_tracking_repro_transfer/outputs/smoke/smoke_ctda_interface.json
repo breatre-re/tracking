@@ -1,0 +1,27 @@
+{
+  "config": {
+    "steps": 80,
+    "num_targets": 6,
+    "area_size": 100.0,
+    "detection_probability": 0.9,
+    "measurement_std": 1.5,
+    "clutter_rate": 1.5,
+    "process_accel_std": 0.08,
+    "seed": 7
+  },
+  "association": "ctda-interface",
+  "metrics": {
+    "frames": 80.0,
+    "ground_truth_objects_per_frame": 4.8125,
+    "matched_object_frames": 384.0,
+    "false_negatives": 1.0,
+    "false_positives": 195.0,
+    "id_switches": 15.0,
+    "mean_position_error": 1.568395700991254,
+    "mota_like": 0.451948051948052
+  },
+  "notes": [
+    "CTDA interface currently delegates to the gated greedy baseline.",
+    "Detection source labels are used only by offline evaluation, never by the tracker."
+  ]
+}

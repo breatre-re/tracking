@@ -1,0 +1,90 @@
+{
+  "audit": {
+    "associations_to_clutter": 1402.0,
+    "associations_to_true": 1637.0,
+    "candidates_born_from_clutter": 147.0,
+    "candidates_born_from_true": 145.0,
+    "total_associations": 3039.0,
+    "total_measurements": 3331.0,
+    "unmatched_clutter": 147.0,
+    "unmatched_true_detections": 145.0
+  },
+  "diagnostics": {
+    "births": 292.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 17.0,
+    "deletions": 242.0,
+    "final_active_tracks": 50.0,
+    "final_confirmed": 17.0,
+    "lost_events": 30.0,
+    "max_concurrent_confirmed": 17.0,
+    "recoveries": 30.0
+  },
+  "distribution": "baseline_distribution",
+  "input_hash": "f2e3b92b59fe093b06e1c25cb7e8e26bc1540d50b94dcb0752a08e9ec02a54cc",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 966.0,
+    "false_negatives": 1350.0,
+    "false_positives": 316.0,
+    "fragmentation": 233.0,
+    "frames": 80.0,
+    "id_switches": 333.0,
+    "matched_detections": 650.0,
+    "mean_position_error": 5.661063408939907,
+    "mota_like": 0.0004999999999999449,
+    "position_rmse": 6.409468981028943,
+    "truth_object_frames": 2000.0,
+    "truth_objects_per_frame": 25.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Stress case: 25 targets with high clutter (lambda=20).",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S7",
+    "num_targets": 25,
+    "process_accel_std": 0.08,
+    "seed": 2077,
+    "steps": 80
+  },
+  "runtime_seconds": 0.9166686190001201,
+  "scenario": "S7",
+  "tracker": "ctda_dynamic_score"
+}

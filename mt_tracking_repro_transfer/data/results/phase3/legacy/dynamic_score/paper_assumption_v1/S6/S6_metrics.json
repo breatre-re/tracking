@@ -1,0 +1,124 @@
+{
+  "diagnostics": {
+    "births": 230.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 162.0,
+    "deletions": 109.0,
+    "final_active_tracks": 121.0,
+    "final_confirmed": 74.0,
+    "lost_events": 474.0,
+    "max_concurrent_confirmed": 87.0,
+    "recoveries": 386.0
+  },
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 5169.0,
+    "false_negatives": 7.0,
+    "false_positives": 5016.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 30.0,
+    "matched_detections": 153.0,
+    "mean_position_error": 2.1510353443296535,
+    "mota_like": -30.58125,
+    "position_rmse": 2.7103411111613105,
+    "truth_object_frames": 160.0,
+    "truth_objects_per_frame": 2.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [
+      {
+        "eligible": true,
+        "end": 46,
+        "post_track_id": 105,
+        "pre_track_id": 105,
+        "recovered": true,
+        "start": 30,
+        "target": 1
+      }
+    ],
+    "opportunities": 1.0,
+    "recovery_rate": 1.0,
+    "successes": 1.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Two targets; one target has a short detection gap then reappears.",
+    "detection_probability": 0.9,
+    "disappearance": [
+      [
+        1,
+        30,
+        46
+      ]
+    ],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S6",
+    "num_targets": 2,
+    "process_accel_std": 0.08,
+    "seed": 12066,
+    "steps": 80
+  },
+  "runtime_seconds": 3.4480894370008173,
+  "scenario": "S6",
+  "tracker": "dynamic_score",
+  "tracker_config": {
+    "filter": {
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "measurement_noise_std": 1.5,
+      "process_accel_std": 0.1
+    },
+    "gate": {
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "physical_gate": 10.0
+    },
+    "kind": "dynamic_score",
+    "lifecycle": {
+      "candidate_expiry": 6,
+      "lost_expiry": 15,
+      "max_missed": 5,
+      "reappearance_reward": 0.0,
+      "report_lost": false
+    },
+    "score": {
+      "confirm_threshold": 1.0,
+      "decay": 0.95,
+      "history_lag": 4,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02
+    }
+  }
+}

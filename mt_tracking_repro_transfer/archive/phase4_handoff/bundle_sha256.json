@@ -1,0 +1,122 @@
+[
+  {
+    "path": "README.md",
+    "sha256": "ef10530ee1f32a39f6c4342fc4897677b4a1ab97e2d900d02913a906c37e3896",
+    "size_bytes": 2828
+  },
+  {
+    "path": "checkpoint_inventory.json",
+    "sha256": "50e80f05463cddcb584bb56cfb668e77effb658e3f6cbe7ea36297f903e38328",
+    "size_bytes": 488
+  },
+  {
+    "path": "checkpoints/row_column_checkpoint.pt",
+    "sha256": "50b855ba102f3aa4f761530d88e1f0c505706881d5d513ed411da049ff044bf9",
+    "size_bytes": 490308
+  },
+  {
+    "path": "nan_case_index.json",
+    "sha256": "cca3f767e9ebb60e5ced8188c569dd9ef20be99d43b36a83fccfeb1a77793a1c",
+    "size_bytes": 1417
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S2/ctda_matching_results.json",
+    "sha256": "3fe0717414eda0e221b362bad8bdabbc64442109493742e1b822174c424e9785",
+    "size_bytes": 139663
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S2/offline_truth_and_labels.npz",
+    "sha256": "4fe751487e8ac1b972d9e0d7bff7bc799b7e6615b8616f5d345c12eb4d9b0a97",
+    "size_bytes": 11220
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S2/tracker_input_positions.npz",
+    "sha256": "155e825b553d65409855f703ee6e9959e8b1fca5a3c7d0843cde7bb85452b59f",
+    "size_bytes": 28837
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S2/tracker_output_metrics.json",
+    "sha256": "8e884f2595a0d3218bb93e10771dae770ac8b8ca9921443054c6876d7323a616",
+    "size_bytes": 2566
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S6/ctda_matching_results.json",
+    "sha256": "0048879c180dbc65dee77d76d9d8292adbda1d0c3816bcb3b3f7ed4166639f69",
+    "size_bytes": 127539
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S6/offline_truth_and_labels.npz",
+    "sha256": "543d579fc4cc56aa1f73bb09afec92192b5b396f9c99d4c5478238b531da6db9",
+    "size_bytes": 6104
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S6/tracker_input_positions.npz",
+    "sha256": "ce5b891b381b3f21185d9aa3f7795f9153e051764ade79875111a5cdfcb8740a",
+    "size_bytes": 26066
+  },
+  {
+    "path": "nan_cases/paper_assumption_v1_S6/tracker_output_metrics.json",
+    "sha256": "61b0b959acd03e7121d56844e9ab88300c5dfae26a2d2a869ea8b1fed3c77ef2",
+    "size_bytes": 2834
+  },
+  {
+    "path": "phase4_ctda.yaml",
+    "sha256": "fa30630331a1b24ceaa7bd028b0fbbf5c9e0fcae7cc37fa3893e4e2b589f9b05",
+    "size_bytes": 3782
+  },
+  {
+    "path": "phase4_manifest.json",
+    "sha256": "ce2dbe09c394844d592855caf066c8fea93b01cf55a689f7c6d6f2acdf242789",
+    "size_bytes": 137899
+  },
+  {
+    "path": "source/ctda_adapter.py",
+    "sha256": "201d647fb545528b36dc46e24b7e0f9bd8407ff20cae8b1eeda3eb50bdd233a3",
+    "size_bytes": 4217
+  },
+  {
+    "path": "source/ctda_features.py",
+    "sha256": "4898a1a2b01da1dbfb523309c4b5df0f8dcdc3a3667a3ef6217752ebdf1871b2",
+    "size_bytes": 10076
+  },
+  {
+    "path": "source/ctda_model.py",
+    "sha256": "b8b1b538130d7a427e6df52cbd74b322e03262f3d5948ff5942cc7abb3ec501d",
+    "size_bytes": 13674
+  },
+  {
+    "path": "source/ctda_objective.py",
+    "sha256": "b73fda9dc31d7b49d855660b6d12fe40bab0380a231db85339b3e9d57d32eb27",
+    "size_bytes": 4813
+  },
+  {
+    "path": "source/ctda_tracker.py",
+    "sha256": "5b887d046f57214473f14c615a05a48d63963bea82c3b6bb64ed3ccf59219469",
+    "size_bytes": 2085
+  },
+  {
+    "path": "source/phase4_runner.py",
+    "sha256": "389fbad29fe61a4c48ee504bfa07a7a74ee663efca2998f3745848d9860cea3e",
+    "size_bytes": 11109
+  },
+  {
+    "path": "training_logs/row_column_3ch_epoch_log.txt",
+    "sha256": "1f114b8bcf73941655f198719747934cca24ddb6761b66207e6023c14e4b64d9",
+    "size_bytes": 783
+  },
+  {
+    "path": "training_logs/row_column_3ch_run_details.json",
+    "sha256": "6afe53977f5b7e1e0a2dbd29ed03c6cacf7102a0fe1ae3b798c636ae6d885c8a",
+    "size_bytes": 724
+  },
+  {
+    "path": "training_logs/row_column_3ch_training_summary.json",
+    "sha256": "fda8777b44adbbb08c5d8200b26d23f95a413fd31be9cdaa2f61f73993ffa982",
+    "size_bytes": 1800
+  },
+  {
+    "path": "training_logs/row_column_training_summary.json",
+    "sha256": "bca89c971a81e6f25ce1d3a82ad514001c8b0261f3bdea273268e76c37f3d52f",
+    "size_bytes": 2072
+  }
+]

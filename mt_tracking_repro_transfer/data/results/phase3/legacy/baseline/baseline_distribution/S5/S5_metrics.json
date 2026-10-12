@@ -1,0 +1,75 @@
+{
+  "diagnostics": {},
+  "distribution": "baseline_distribution",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 510.0,
+    "false_negatives": 2.0,
+    "false_positives": 177.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 8.0,
+    "matched_detections": 333.0,
+    "mean_position_error": 1.4778305173992508,
+    "mota_like": 0.4417910447761194,
+    "position_rmse": 1.7362523954078677,
+    "truth_object_frames": 335.0,
+    "truth_objects_per_frame": 4.1875
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "description": "Staggered target births and deaths across the horizon.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": [
+      [
+        0,
+        80
+      ],
+      [
+        0,
+        80
+      ],
+      [
+        10,
+        80
+      ],
+      [
+        5,
+        60
+      ],
+      [
+        20,
+        70
+      ]
+    ],
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S5",
+    "num_targets": 5,
+    "process_accel_std": 0.08,
+    "seed": 2055,
+    "steps": 80
+  },
+  "runtime_seconds": 0.007523499998569605,
+  "scenario": "S5",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

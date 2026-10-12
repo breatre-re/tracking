@@ -1,0 +1,676 @@
+{
+  "case_count": 16,
+  "cases": [
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 80.0,
+        "false_negatives": 0.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 80.0,
+        "mean_position_error": 0.021875714167164894,
+        "mota_like": 1.0,
+        "position_rmse": 0.07535971429392156,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S0/S0_metrics.json",
+      "metrics_sha256": "89be8b37782eedd397e91fba83abb0d3b7c0fa4b78aca75d51e4c663632724fb",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S0_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 2000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.05820924100044067,
+      "scenario": "S0"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 575.0,
+        "false_negatives": 1.0,
+        "false_positives": 176.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 18.0,
+        "matched_detections": 399.0,
+        "mean_position_error": 1.4872308039112805,
+        "mota_like": 0.5125,
+        "position_rmse": 1.6735592827191998,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S1/S1_metrics.json",
+      "metrics_sha256": "82be29cd03e54cef0eea542c041046fa5aec16efbad2a211e89d3951ef61b3f8",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S1_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2011,
+        "steps": 80
+      },
+      "runtime_seconds": 0.008474304999253945,
+      "scenario": "S1"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 550.0,
+        "false_negatives": 2.0,
+        "false_positives": 232.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 9.0,
+        "matched_detections": 318.0,
+        "mean_position_error": 1.4551796489995794,
+        "mota_like": 0.24062499999999998,
+        "position_rmse": 1.64747147970274,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S2/S2_metrics.json",
+      "metrics_sha256": "4ab70b615d107830c32c262d73df970db955f9436e8e10ac1afc10a69d7dc7b8",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S2_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 2022,
+        "steps": 80
+      },
+      "runtime_seconds": 0.007664558000215038,
+      "scenario": "S2"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 384.0,
+        "false_negatives": 12.0,
+        "false_positives": 156.0,
+        "fragmentation": 3.0,
+        "frames": 80.0,
+        "id_switches": 2.0,
+        "matched_detections": 228.0,
+        "mean_position_error": 1.7912976858001646,
+        "mota_like": 0.29166666666666663,
+        "position_rmse": 2.1363165657368177,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S3/S3_metrics.json",
+      "metrics_sha256": "0876a236994f92740c8a6299069de5a2d5fe0488caac78092dccdca819e26fd0",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S3_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2033,
+        "steps": 80
+      },
+      "runtime_seconds": 0.005415143999925931,
+      "scenario": "S3"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 995.0,
+        "false_negatives": 0.0,
+        "false_positives": 755.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 8.0,
+        "matched_detections": 240.0,
+        "mean_position_error": 1.549530988614756,
+        "mota_like": -2.1791666666666667,
+        "position_rmse": 1.765073826111801,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S4/S4_metrics.json",
+      "metrics_sha256": "875090353000e80cc8d94f9aacfb5a59e4eae9983c4728e83c1aef16bdbd4cf5",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S4_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 5.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2044,
+        "steps": 80
+      },
+      "runtime_seconds": 0.01244952200067928,
+      "scenario": "S4"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 510.0,
+        "false_negatives": 2.0,
+        "false_positives": 177.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 8.0,
+        "matched_detections": 333.0,
+        "mean_position_error": 1.4778305173992508,
+        "mota_like": 0.4417910447761194,
+        "position_rmse": 1.7362523954078677,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S5/S5_metrics.json",
+      "metrics_sha256": "f2ac59fee77fa2183a73080f8422ca56f9ae4a1b03a86087a86ff179542765cd",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S5_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2055,
+        "steps": 80
+      },
+      "runtime_seconds": 0.008090335999440867,
+      "scenario": "S5"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 306.0,
+        "false_negatives": 10.0,
+        "false_positives": 156.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 1.0,
+        "matched_detections": 150.0,
+        "mean_position_error": 1.5674164488510325,
+        "mota_like": -0.043749999999999956,
+        "position_rmse": 1.8198240767665834,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S6/S6_metrics.json",
+      "metrics_sha256": "4cacb8c96b5db3172b6e8e9ecc97e18ec17a406993dea2bca47ee3bc1ca3da76",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S6_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 2066,
+        "steps": 80
+      },
+      "runtime_seconds": 0.005294277999382757,
+      "scenario": "S6"
+    },
+    {
+      "distribution": "baseline_distribution",
+      "metrics": {
+        "emitted_estimates": 6064.0,
+        "false_negatives": 5.0,
+        "false_positives": 4069.0,
+        "fragmentation": 2.0,
+        "frames": 80.0,
+        "id_switches": 482.0,
+        "matched_detections": 1995.0,
+        "mean_position_error": 1.6588595954860679,
+        "mota_like": -1.278,
+        "position_rmse": 2.0174713855692987,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase2/legacy/baseline_distribution/S7/S7_metrics.json",
+      "metrics_sha256": "510fe6d6d7b88fdb7b3c320c735bf631d5d91806f8672a3990b6b4fd9e49d059",
+      "plot_file": "outputs/figures/phase2/baseline_distribution/S7_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 2077,
+        "steps": 80
+      },
+      "runtime_seconds": 0.08935306800049148,
+      "scenario": "S7"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 80.0,
+        "false_negatives": 0.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 80.0,
+        "mean_position_error": 0.021875714167164894,
+        "mota_like": 1.0,
+        "position_rmse": 0.07535971429392156,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S0/S0_metrics.json",
+      "metrics_sha256": "426a8a4ac60589e3b84d6b472c98b3b2051f1481869f37e6f96deb244dc6ed8c",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S0_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 12000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.0019331619996592053,
+      "scenario": "S0"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 4435.0,
+        "false_negatives": 2.0,
+        "false_positives": 4037.0,
+        "fragmentation": 2.0,
+        "frames": 80.0,
+        "id_switches": 57.0,
+        "matched_detections": 398.0,
+        "mean_position_error": 1.6103231423046944,
+        "mota_like": -9.24,
+        "position_rmse": 1.9080298975950354,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S1/S1_metrics.json",
+      "metrics_sha256": "26ad49d6bc6445085fe3464f0268de832122b212d851aef3275f95dda850766f",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S1_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12011,
+        "steps": 80
+      },
+      "runtime_seconds": 0.053405235999889555,
+      "scenario": "S1"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 4264.0,
+        "false_negatives": 0.0,
+        "false_positives": 3944.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 74.0,
+        "matched_detections": 320.0,
+        "mean_position_error": 1.8055877312739164,
+        "mota_like": -11.55625,
+        "position_rmse": 2.1487798291748583,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S2/S2_metrics.json",
+      "metrics_sha256": "4008d3aecfbed28ffd226a97d1123f80505062e1cb9ecca054612d5f2506c679",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S2_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 12022,
+        "steps": 80
+      },
+      "runtime_seconds": 0.0502156209995519,
+      "scenario": "S2"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 3938.0,
+        "false_negatives": 5.0,
+        "false_positives": 3703.0,
+        "fragmentation": 4.0,
+        "frames": 80.0,
+        "id_switches": 53.0,
+        "matched_detections": 235.0,
+        "mean_position_error": 2.954643041134564,
+        "mota_like": -14.670833333333333,
+        "position_rmse": 3.8605701643975427,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S3/S3_metrics.json",
+      "metrics_sha256": "2ad746834e3fc68e1d7fbe973f714f8d610337943127912b8d525cd2b89f19f2",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S3_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12033,
+        "steps": 80
+      },
+      "runtime_seconds": 0.044907167999554076,
+      "scenario": "S3"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 4125.0,
+        "false_negatives": 0.0,
+        "false_positives": 3885.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 22.0,
+        "matched_detections": 240.0,
+        "mean_position_error": 1.79958824620829,
+        "mota_like": -15.279166666666665,
+        "position_rmse": 2.0874683996715184,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S4/S4_metrics.json",
+      "metrics_sha256": "8bae70f9c9086a55b547ae3f6fb69fc7e3cca31ad6a898143fd8272f12b68dd5",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S4_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12044,
+        "steps": 80
+      },
+      "runtime_seconds": 0.04794814500019129,
+      "scenario": "S4"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 4167.0,
+        "false_negatives": 0.0,
+        "false_positives": 3832.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 37.0,
+        "matched_detections": 335.0,
+        "mean_position_error": 1.6269135014493292,
+        "mota_like": -10.549253731343283,
+        "position_rmse": 1.9181491592399367,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S5/S5_metrics.json",
+      "metrics_sha256": "ce47c4a948dff34342d14a4b287838d2f1fee79d71bb58075248a800cb49d8e2",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S5_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12055,
+        "steps": 80
+      },
+      "runtime_seconds": 0.050533599999653234,
+      "scenario": "S5"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 3988.0,
+        "false_negatives": 2.0,
+        "false_positives": 3830.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 21.0,
+        "matched_detections": 158.0,
+        "mean_position_error": 2.1830652527286074,
+        "mota_like": -23.08125,
+        "position_rmse": 2.9167450362828946,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S6/S6_metrics.json",
+      "metrics_sha256": "be0b7b8282afd7140d9ca68e19fd1f722ed728922427fbc8112e94baf7c8ce9f",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S6_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 12066,
+        "steps": 80
+      },
+      "runtime_seconds": 0.044885297999826435,
+      "scenario": "S6"
+    },
+    {
+      "distribution": "paper_assumption_v1",
+      "metrics": {
+        "emitted_estimates": 6079.0,
+        "false_negatives": 3.0,
+        "false_positives": 4082.0,
+        "fragmentation": 3.0,
+        "frames": 80.0,
+        "id_switches": 462.0,
+        "matched_detections": 1997.0,
+        "mean_position_error": 1.7465061638169395,
+        "mota_like": -1.2734999999999999,
+        "position_rmse": 2.08420974064377,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase2/legacy/paper_assumption_v1/S7/S7_metrics.json",
+      "metrics_sha256": "9890a91ffdc27c793e5fd28e0088fa3e78d93e07b190f61f5881eec9d08bcb21",
+      "plot_file": "outputs/figures/phase2/paper_assumption_v1/S7_trajectory.png",
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 12077,
+        "steps": 80
+      },
+      "runtime_seconds": 0.088472143999752,
+      "scenario": "S7"
+    }
+  ],
+  "config_file": "configs/phase2_scenarios.yaml",
+  "match_gate": 12.0,
+  "schema_version": 1,
+  "tracker": {
+    "association": "gated-greedy",
+    "gate": 9.0,
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

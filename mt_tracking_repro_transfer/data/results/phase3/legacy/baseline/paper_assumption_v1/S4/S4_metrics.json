@@ -1,0 +1,54 @@
+{
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 4125.0,
+    "false_negatives": 0.0,
+    "false_positives": 3885.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 22.0,
+    "matched_detections": 240.0,
+    "mean_position_error": 1.79958824620829,
+    "mota_like": -15.279166666666665,
+    "position_rmse": 2.0874683996715184,
+    "truth_object_frames": 240.0,
+    "truth_objects_per_frame": 3.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "False alarms / clutter at a rate above the low-noise baseline.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S4",
+    "num_targets": 3,
+    "process_accel_std": 0.08,
+    "seed": 12044,
+    "steps": 80
+  },
+  "runtime_seconds": 0.047991876999731176,
+  "scenario": "S4",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

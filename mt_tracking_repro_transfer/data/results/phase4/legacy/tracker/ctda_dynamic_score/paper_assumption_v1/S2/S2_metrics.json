@@ -1,0 +1,90 @@
+{
+  "audit": {
+    "associations_to_clutter": 1404.0,
+    "associations_to_true": 232.0,
+    "candidates_born_from_clutter": 190.0,
+    "candidates_born_from_true": 45.0,
+    "total_associations": 1636.0,
+    "total_measurements": 1871.0,
+    "unmatched_clutter": 190.0,
+    "unmatched_true_detections": 45.0
+  },
+  "diagnostics": {
+    "births": 235.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 0.0,
+    "deletions": 211.0,
+    "final_active_tracks": 24.0,
+    "final_confirmed": 0.0,
+    "lost_events": 0.0,
+    "max_concurrent_confirmed": 0.0,
+    "recoveries": 0.0
+  },
+  "distribution": "paper_assumption_v1",
+  "input_hash": "d2333933b1dfbe0f893fd7d5d65bf6e78ce4c6dc610572650df9bfa0da2ccdff",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 0.0,
+    "false_negatives": 320.0,
+    "false_positives": 0.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 0.0,
+    "mean_position_error": NaN,
+    "mota_like": 0.0,
+    "position_rmse": NaN,
+    "truth_object_frames": 320.0,
+    "truth_objects_per_frame": 4.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Multiple targets whose straight-line paths cross.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "crossing",
+    "name": "S2",
+    "num_targets": 4,
+    "process_accel_std": 0.08,
+    "seed": 12022,
+    "steps": 80
+  },
+  "runtime_seconds": 1.0914866320017609,
+  "scenario": "S2",
+  "tracker": "ctda_dynamic_score"
+}

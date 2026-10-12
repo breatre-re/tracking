@@ -1,0 +1,90 @@
+{
+  "audit": {
+    "associations_to_clutter": 98.0,
+    "associations_to_true": 322.0,
+    "candidates_born_from_clutter": 15.0,
+    "candidates_born_from_true": 30.0,
+    "total_associations": 420.0,
+    "total_measurements": 465.0,
+    "unmatched_clutter": 15.0,
+    "unmatched_true_detections": 30.0
+  },
+  "diagnostics": {
+    "births": 45.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 2.0,
+    "deletions": 37.0,
+    "final_active_tracks": 8.0,
+    "final_confirmed": 2.0,
+    "lost_events": 10.0,
+    "max_concurrent_confirmed": 2.0,
+    "recoveries": 10.0
+  },
+  "distribution": "baseline_distribution",
+  "input_hash": "205b4ca38515b07d45b2c66c5551eeb84cc639f4c052fcf99fa3d0b8eda44537",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 144.0,
+    "false_negatives": 325.0,
+    "false_positives": 69.0,
+    "fragmentation": 33.0,
+    "frames": 80.0,
+    "id_switches": 18.0,
+    "matched_detections": 75.0,
+    "mean_position_error": 6.587862948821853,
+    "mota_like": -0.030000000000000027,
+    "position_rmse": 7.284505923206409,
+    "truth_object_frames": 400.0,
+    "truth_objects_per_frame": 5.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "description": "Multiple separated targets on non-crossing parallel lanes.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S1",
+    "num_targets": 5,
+    "process_accel_std": 0.08,
+    "seed": 2011,
+    "steps": 80
+  },
+  "runtime_seconds": 0.8390504229992075,
+  "scenario": "S1",
+  "tracker": "ctda_dynamic_score"
+}

@@ -1,0 +1,232 @@
+{
+  "config_file": "configs/phase1_5_distributions.yaml",
+  "distributions": {
+    "baseline_distribution": {
+      "assumptions": [
+        "Baseline reference reproduces Phase 1: fixed 6 targets and Poisson clutter_rate=1.5 per frame."
+      ],
+      "scenario": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "detection_probability": 0.9,
+        "measurement_std": 1.5,
+        "num_targets": 6,
+        "process_accel_std": 0.08,
+        "seed": 7,
+        "steps": 80
+      },
+      "splits": {
+        "test": {
+          "clutter_count_per_frame_mean": 1.4996875,
+          "clutter_count_per_frame_std": 1.2244896497495394,
+          "event_counts": {
+            "birth": 1200,
+            "clutter": 23995,
+            "death": 1200,
+            "missed_detection": 7624
+          },
+          "file": "data/datasets/phase1_5/baseline_distribution/test/test_dataset.npz",
+          "measurement_shape": [
+            93371,
+            2
+          ],
+          "sample_count": 200,
+          "seed_end": 20263199,
+          "seed_start": 20263000,
+          "sha256": "12c8969d6e5f424be6946431752ee5717c8fdafb0faf1c08eb969714d44c5527",
+          "split": "test",
+          "target_count_histogram": {
+            "6": 200
+          },
+          "target_count_mean": 6.0,
+          "target_count_range": [
+            6,
+            6
+          ],
+          "total_measurements": 93371,
+          "truth_states_shape": [
+            200,
+            80,
+            6,
+            4
+          ]
+        },
+        "train": {
+          "clutter_count_per_frame_mean": 1.5000347222222221,
+          "clutter_count_per_frame_std": 1.222923409482799,
+          "event_counts": {
+            "birth": 10800,
+            "clutter": 216005,
+            "death": 10800,
+            "missed_detection": 69207
+          },
+          "file": "data/datasets/phase1_5/baseline_distribution/train/train_dataset.npz",
+          "measurement_shape": [
+            839798,
+            2
+          ],
+          "sample_count": 1800,
+          "seed_end": 20262799,
+          "seed_start": 20261000,
+          "sha256": "79e251409f6bdca9b1925d39cb3625b1885ae982f7359bcc7cb163a9a636a6d9",
+          "split": "train",
+          "target_count_histogram": {
+            "6": 1800
+          },
+          "target_count_mean": 6.0,
+          "target_count_range": [
+            6,
+            6
+          ],
+          "total_measurements": 839798,
+          "truth_states_shape": [
+            1800,
+            80,
+            6,
+            4
+          ]
+        }
+      }
+    },
+    "paper_assumption_v1": {
+      "assumptions": [
+        "Target count is sampled discrete-uniformly from integers 1 through 25 for every trajectory.",
+        "Table 8 Poisson lambda=20 is interpreted as clutter count per time step.",
+        "The per-time-step interpretation of lambda=20 is a reproduction assumption if the paper does not specify its temporal unit.",
+        "Unspecified scenario parameters retain Phase 1 values; birth/death schedules retain the existing baseline generator."
+      ],
+      "scenario": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "detection_probability": 0.9,
+        "measurement_std": 1.5,
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 7,
+        "steps": 80
+      },
+      "splits": {
+        "test": {
+          "clutter_count_per_frame_mean": 19.9831875,
+          "clutter_count_per_frame_std": 4.470643671759555,
+          "event_counts": {
+            "birth": 2552,
+            "clutter": 319731,
+            "death": 2552,
+            "missed_detection": 12653
+          },
+          "file": "data/datasets/phase1_5/paper_assumption_v1/test/test_dataset.npz",
+          "measurement_shape": [
+            431886,
+            2
+          ],
+          "sample_count": 200,
+          "seed_end": 30263199,
+          "seed_start": 30263000,
+          "sha256": "fa1ff879f11af9736c216ecc5e116d1ffb9e0a076cc6c54519ca86c7e3487b1f",
+          "split": "test",
+          "target_count_histogram": {
+            "1": 7,
+            "10": 8,
+            "11": 8,
+            "12": 7,
+            "13": 2,
+            "14": 10,
+            "15": 13,
+            "16": 7,
+            "17": 17,
+            "18": 8,
+            "19": 7,
+            "2": 7,
+            "20": 5,
+            "21": 7,
+            "22": 8,
+            "23": 6,
+            "24": 4,
+            "25": 9,
+            "3": 10,
+            "4": 8,
+            "5": 9,
+            "6": 6,
+            "7": 11,
+            "8": 6,
+            "9": 10
+          },
+          "target_count_mean": 12.76,
+          "target_count_range": [
+            1,
+            25
+          ],
+          "total_measurements": 431886,
+          "truth_states_shape": [
+            200,
+            80,
+            25,
+            4
+          ]
+        },
+        "train": {
+          "clutter_count_per_frame_mean": 20.003506944444446,
+          "clutter_count_per_frame_std": 4.4668168732463664,
+          "event_counts": {
+            "birth": 22986,
+            "clutter": 2880505,
+            "death": 22986,
+            "missed_detection": 110856
+          },
+          "file": "data/datasets/phase1_5/paper_assumption_v1/train/train_dataset.npz",
+          "measurement_shape": [
+            3885985,
+            2
+          ],
+          "sample_count": 1800,
+          "seed_end": 30262799,
+          "seed_start": 30261000,
+          "sha256": "66aa68b50637031e00fb6d838453ce4c972d72a5cc406ee36661c874607f16ec",
+          "split": "train",
+          "target_count_histogram": {
+            "1": 68,
+            "10": 67,
+            "11": 74,
+            "12": 86,
+            "13": 74,
+            "14": 73,
+            "15": 66,
+            "16": 57,
+            "17": 70,
+            "18": 80,
+            "19": 63,
+            "2": 69,
+            "20": 70,
+            "21": 76,
+            "22": 70,
+            "23": 75,
+            "24": 57,
+            "25": 69,
+            "3": 81,
+            "4": 77,
+            "5": 70,
+            "6": 84,
+            "7": 75,
+            "8": 74,
+            "9": 75
+          },
+          "target_count_mean": 12.77,
+          "target_count_range": [
+            1,
+            25
+          ],
+          "total_measurements": 3885985,
+          "truth_states_shape": [
+            1800,
+            80,
+            25,
+            4
+          ]
+        }
+      }
+    }
+  },
+  "schema_version": 2,
+  "seed_policy": "Each sample uses default_rng(seed_start + sample_index); target-count sampling, when configured, uses an independent SeedSequence stream."
+}

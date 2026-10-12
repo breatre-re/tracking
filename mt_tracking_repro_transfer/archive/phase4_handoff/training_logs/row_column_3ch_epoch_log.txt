@@ -1,0 +1,15 @@
+row_column_3ch epoch log (rendered from persisted training_summary.json)
+Note: raw terminal stdout was not persisted; this file reproduces all epoch-level values retained in training_summary.json.
+variant=row_column_3ch seed=20261012 device=cuda epochs=8 batch_size=256 optimizer=adam lr=0.0001
+train_examples=32400 validation_examples=3600 training_seconds=95.779489
+train_split=data/generated/paper_assumption_v1/train/train_dataset.npz sha256=66aa68b50637031e00fb6d838453ce4c972d72a5cc406ee36661c874607f16ec
+best_epoch=-1 best_validation_loss=inf
+epoch	seconds	train_loss	validation_loss
+0	11.9724361168	NaN	NaN
+1	11.9724361168	NaN	NaN
+2	11.9724361168	NaN	NaN
+3	11.9724361168	NaN	NaN
+4	11.9724361168	NaN	NaN
+5	11.9724361168	NaN	NaN
+6	11.9724361168	NaN	NaN
+7	11.9724361168	NaN	NaN

@@ -1,0 +1,124 @@
+{
+  "audit": {
+    "associations_to_clutter": 1397.0,
+    "associations_to_true": 357.0,
+    "candidates_born_from_clutter": 221.0,
+    "candidates_born_from_true": 7.0,
+    "total_associations": 1754.0,
+    "total_measurements": 1982.0,
+    "unmatched_clutter": 221.0,
+    "unmatched_true_detections": 7.0
+  },
+  "diagnostics": {
+    "births": 228.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 167.0,
+    "deletions": 105.0,
+    "final_active_tracks": 123.0,
+    "final_confirmed": 80.0,
+    "lost_events": 493.0,
+    "max_concurrent_confirmed": 94.0,
+    "recoveries": 406.0
+  },
+  "distribution": "paper_assumption_v1",
+  "input_hashes": {
+    "label_hash": "32efc344a6a61fa2d26e76e3af05d1f740d42409520c930fe2b3cf68c3f563b3",
+    "measurement_hash": "3f187e25c4623490a7414b8cc257977573f20e80920d0ef2795af737a43eee5d",
+    "truth_hash": "ce25e6e9a925b8c666f2a0fe6e6e3d88ad20b947db17ffe5d1b3bbdc302ba310"
+  },
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 5767.0,
+    "false_negatives": 10.0,
+    "false_positives": 5377.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 68.0,
+    "matched_detections": 390.0,
+    "mean_position_error": 1.6946112889135094,
+    "mota_like": -12.6375,
+    "position_rmse": 2.1693516541726305,
+    "truth_object_frames": 400.0,
+    "truth_objects_per_frame": 5.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the offline evaluator/audit.",
+    "Only missed_increment_mode differs between variants A and B.",
+    "runtime_seconds is wall-clock and not a parity field."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Multiple separated targets on non-crossing parallel lanes.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S1",
+    "num_targets": 5,
+    "process_accel_std": 0.08,
+    "seed": 12011,
+    "steps": 80
+  },
+  "runtime_seconds": 4.29060811599993,
+  "scenario": "S1",
+  "tracker_config": {
+    "filter": {
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "measurement_noise_std": 1.5,
+      "process_accel_std": 0.1
+    },
+    "gate": {
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "physical_gate": 10.0
+    },
+    "kind": "dynamic_score",
+    "lifecycle": {
+      "candidate_expiry": 6,
+      "lost_expiry": 15,
+      "max_missed": 5,
+      "reappearance_reward": 0.0,
+      "report_lost": false
+    },
+    "score": {
+      "confirm_threshold": 1.0,
+      "decay": 0.95,
+      "history_lag": 4,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02
+    }
+  },
+  "variant": "B_documented"
+}

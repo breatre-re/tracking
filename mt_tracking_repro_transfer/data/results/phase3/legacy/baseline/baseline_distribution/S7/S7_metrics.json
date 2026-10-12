@@ -1,0 +1,54 @@
+{
+  "diagnostics": {},
+  "distribution": "baseline_distribution",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 6064.0,
+    "false_negatives": 5.0,
+    "false_positives": 4069.0,
+    "fragmentation": 2.0,
+    "frames": 80.0,
+    "id_switches": 482.0,
+    "matched_detections": 1995.0,
+    "mean_position_error": 1.6588595954860679,
+    "mota_like": -1.278,
+    "position_rmse": 2.0174713855692987,
+    "truth_object_frames": 2000.0,
+    "truth_objects_per_frame": 25.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Stress case: 25 targets with high clutter (lambda=20).",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S7",
+    "num_targets": 25,
+    "process_accel_std": 0.08,
+    "seed": 2077,
+    "steps": 80
+  },
+  "runtime_seconds": 0.0892264209996938,
+  "scenario": "S7",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

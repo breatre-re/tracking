@@ -1,0 +1,22 @@
+MT Tracking Reproduction Transfer Bundle
+
+Required files:
+  docs/plan/EXECUTION_PLAYBOOK.md
+  README.md
+  src/tracking/baseline_tracker.py
+  requirements.txt
+  demo_metrics.json
+
+Optional local review documents, if available:
+  docs/plan/IMPLEMENTATION_SPEC.md
+  docs/plan/REVIEW_PLAN.md
+
+Server handoff order:
+  1. Copy the whole directory without renaming files.
+  2. Read docs/plan/EXECUTION_PLAYBOOK.md.
+  3. Run Phase 0 smoke tests only.
+  4. Report environment and metrics before changing code.
+
+Important:
+  This bundle contains a baseline tracker, not the paper's complete CTDA implementation.
+  The paper's dataset and source code are not assumed to be publicly downloadable.

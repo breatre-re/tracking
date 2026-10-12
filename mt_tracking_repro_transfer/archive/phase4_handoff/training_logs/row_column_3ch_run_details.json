@@ -1,0 +1,20 @@
+{
+  "batch_size": 256,
+  "config_file": "phase4_ctda.yaml",
+  "deterministic": true,
+  "device": "cuda",
+  "epochs": 8,
+  "frames_per_sequence": 20,
+  "learning_rate": 0.0001,
+  "optimizer": "adam",
+  "raw_stdout_log": "not persisted; see training_summary.json and rendered epoch log",
+  "result": "all train and validation losses are NaN; best_epoch=-1; no checkpoint produced",
+  "train_examples": 32400,
+  "train_samples": 1620,
+  "train_split": "data/generated/paper_assumption_v1/train/train_dataset.npz",
+  "train_split_sha256": "66aa68b50637031e00fb6d838453ce4c972d72a5cc406ee36661c874607f16ec",
+  "training_seed": 20261012,
+  "validation_examples": 3600,
+  "validation_samples": 180,
+  "variant": "row_column_3ch"
+}

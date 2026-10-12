@@ -1,0 +1,92 @@
+{
+  "config_file": "configs/phase1_2d.yaml",
+  "scenario": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "detection_probability": 0.9,
+    "measurement_std": 1.5,
+    "num_targets": 6,
+    "process_accel_std": 0.08,
+    "seed": 7,
+    "steps": 80
+  },
+  "schema_version": 1,
+  "seed_policy": "Each sample uses default_rng(seed_start + sample_index).",
+  "splits": {
+    "smoke": {
+      "event_counts": {
+        "birth": 24,
+        "clutter": 464,
+        "death": 24,
+        "missed_detection": 143
+      },
+      "file": "data/datasets/phase1/smoke/smoke_dataset.npz",
+      "measurement_shape": [
+        1861,
+        2
+      ],
+      "sample_count": 4,
+      "seed_end": 10,
+      "seed_start": 7,
+      "sha256": "64cfa07e499e3f928e6639fb9aa63b964a3a3684eff4e0ffe244d6f25d7a62de",
+      "split": "smoke",
+      "total_measurements": 1861,
+      "truth_states_shape": [
+        4,
+        80,
+        6,
+        4
+      ]
+    },
+    "test": {
+      "event_counts": {
+        "birth": 1200,
+        "clutter": 23995,
+        "death": 1200,
+        "missed_detection": 7624
+      },
+      "file": "data/datasets/phase1/test/test_dataset.npz",
+      "measurement_shape": [
+        93371,
+        2
+      ],
+      "sample_count": 200,
+      "seed_end": 20263199,
+      "seed_start": 20263000,
+      "sha256": "f72b2a3d317bf3689f1ff0aba826bb32853575c0faf5eee0d289cab9a06b3605",
+      "split": "test",
+      "total_measurements": 93371,
+      "truth_states_shape": [
+        200,
+        80,
+        6,
+        4
+      ]
+    },
+    "train": {
+      "event_counts": {
+        "birth": 10800,
+        "clutter": 216005,
+        "death": 10800,
+        "missed_detection": 69207
+      },
+      "file": "data/datasets/phase1/train/train_dataset.npz",
+      "measurement_shape": [
+        839798,
+        2
+      ],
+      "sample_count": 1800,
+      "seed_end": 20262799,
+      "seed_start": 20261000,
+      "sha256": "91b8e4352d7958999e3f72608c8f9e3074e513ed9c1af617a86b78bf4af1a418",
+      "split": "train",
+      "total_measurements": 839798,
+      "truth_states_shape": [
+        1800,
+        80,
+        6,
+        4
+      ]
+    }
+  }
+}

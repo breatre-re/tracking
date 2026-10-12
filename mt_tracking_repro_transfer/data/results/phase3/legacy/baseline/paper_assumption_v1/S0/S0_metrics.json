@@ -1,0 +1,54 @@
+{
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 80.0,
+    "false_negatives": 0.0,
+    "false_positives": 0.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 80.0,
+    "mean_position_error": 0.021875714167164894,
+    "mota_like": 1.0,
+    "position_rmse": 0.07535971429392156,
+    "truth_object_frames": 80.0,
+    "truth_objects_per_frame": 1.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 0.0,
+    "description": "Single target, no measurement/process noise and no clutter.",
+    "detection_probability": 1.0,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 0.0,
+    "motion": "solo",
+    "name": "S0",
+    "num_targets": 1,
+    "process_accel_std": 0.0,
+    "seed": 12000,
+    "steps": 80
+  },
+  "runtime_seconds": 0.0019141510001645656,
+  "scenario": "S0",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

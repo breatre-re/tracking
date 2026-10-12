@@ -1,0 +1,54 @@
+{
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 4435.0,
+    "false_negatives": 2.0,
+    "false_positives": 4037.0,
+    "fragmentation": 2.0,
+    "frames": 80.0,
+    "id_switches": 57.0,
+    "matched_detections": 398.0,
+    "mean_position_error": 1.6103231423046944,
+    "mota_like": -9.24,
+    "position_rmse": 1.9080298975950354,
+    "truth_object_frames": 400.0,
+    "truth_objects_per_frame": 5.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Multiple separated targets on non-crossing parallel lanes.",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S1",
+    "num_targets": 5,
+    "process_accel_std": 0.08,
+    "seed": 12011,
+    "steps": 80
+  },
+  "runtime_seconds": 0.0529383630000666,
+  "scenario": "S1",
+  "tracker": "baseline",
+  "tracker_config": {
+    "gate": 9.0,
+    "kind": "gated_greedy",
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

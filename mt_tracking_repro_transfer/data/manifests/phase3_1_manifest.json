@@ -1,0 +1,4148 @@
+{
+  "audit": {
+    "notes": [
+      "Eq. (30) is source-confirmed as ln((1-P_FA)/(1-P_D)); positive when P_D > P_FA.",
+      "Variant B is the paper-faithful increment; variant A is a hypothesis only.",
+      "Numeric P_B/P_FA/P_D/lambda_s/lambda_t/S_c are scene-dependent and unpublished; values here are assumptions."
+    ],
+    "p_detect": 0.9,
+    "p_false_alarm": 0.02,
+    "papers": [
+      "Zhang et al., Aerospace Science and Technology 168 (2026) 111007, Eq. (30), p. 8"
+    ]
+  },
+  "case_count": 32,
+  "cases": [
+    {
+      "audit": {
+        "associations_to_clutter": 0.0,
+        "associations_to_true": 79.0,
+        "candidates_born_from_clutter": 0.0,
+        "candidates_born_from_true": 1.0,
+        "total_associations": 79.0,
+        "total_measurements": 80.0,
+        "unmatched_clutter": 0.0,
+        "unmatched_true_detections": 1.0
+      },
+      "diagnostics": {
+        "births": 1.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 1.0,
+        "deletions": 0.0,
+        "final_active_tracks": 1.0,
+        "final_confirmed": 1.0,
+        "lost_events": 0.0,
+        "max_concurrent_confirmed": 1.0,
+        "recoveries": 0.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee",
+        "measurement_hash": "1e85047420bb1eb63a8462e7e4430aa8e3052fe488584a72c09e0bf2900a8b68",
+        "truth_hash": "c0e9620e7a26136acd276dd0479eed00b14c678316b661166625817dd28645d0"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 79.0,
+        "false_negatives": 1.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 79.0,
+        "mean_position_error": 0.031016331995410526,
+        "mota_like": 0.9875,
+        "position_rmse": 0.1072849005978566,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S0/S0_metrics.json",
+      "metrics_sha256": "50ff161f4092306caae8727289c0ca2ed1f7777ee19a2b69ecb1861375ac5cac",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S0_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 2000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.13995974999852479,
+      "scenario": "S0",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 6.0,
+        "associations_to_true": 335.0,
+        "candidates_born_from_clutter": 107.0,
+        "candidates_born_from_true": 17.0,
+        "total_associations": 341.0,
+        "total_measurements": 465.0,
+        "unmatched_clutter": 107.0,
+        "unmatched_true_detections": 17.0
+      },
+      "diagnostics": {
+        "births": 124.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 6.0,
+        "deletions": 114.0,
+        "final_active_tracks": 10.0,
+        "final_confirmed": 4.0,
+        "lost_events": 29.0,
+        "max_concurrent_confirmed": 6.0,
+        "recoveries": 27.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "f483f7827e8aad7b7315371064d71c0b2fb6440743c6fb4acffb6f8237211b93",
+        "measurement_hash": "83caf9f86d81d4a53f5a048cd08845e9f9ffa16e659b0d796e3802ee36e90869",
+        "truth_hash": "b41f83aa07c02ff858c1236b3d3cfe18107257e45b1500bbbc057fc6b8ec6e23"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 317.0,
+        "false_negatives": 95.0,
+        "false_positives": 12.0,
+        "fragmentation": 20.0,
+        "frames": 80.0,
+        "id_switches": 11.0,
+        "matched_detections": 305.0,
+        "mean_position_error": 1.1345302690391617,
+        "mota_like": 0.7050000000000001,
+        "position_rmse": 1.340190291086821,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S1/S1_metrics.json",
+      "metrics_sha256": "51a07fe2aef06db0bab9ef61d16ff079abf5335d84c04a923eb7cff5525f64ee",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S1_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2011,
+        "steps": 80
+      },
+      "runtime_seconds": 0.0982949989993358,
+      "scenario": "S1",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 7.0,
+        "associations_to_true": 284.0,
+        "candidates_born_from_clutter": 117.0,
+        "candidates_born_from_true": 11.0,
+        "total_associations": 291.0,
+        "total_measurements": 419.0,
+        "unmatched_clutter": 117.0,
+        "unmatched_true_detections": 11.0
+      },
+      "diagnostics": {
+        "births": 128.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 8.0,
+        "deletions": 118.0,
+        "final_active_tracks": 10.0,
+        "final_confirmed": 4.0,
+        "lost_events": 26.0,
+        "max_concurrent_confirmed": 5.0,
+        "recoveries": 22.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "afbc5364bb9a0e2f2d153c8b0ba742571d455e3d4de9c5a7cf11236c2a4f09fb",
+        "measurement_hash": "bc643e31b354c1a6721244e6bbd06d5932d2c2f78721890518030b54dcdb2282",
+        "truth_hash": "db2e59d1a2baa273f4d296378cdfa1ab83fb74a6b1df9e46e79d1ee41195298e"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 291.0,
+        "false_negatives": 50.0,
+        "false_positives": 21.0,
+        "fragmentation": 16.0,
+        "frames": 80.0,
+        "id_switches": 15.0,
+        "matched_detections": 270.0,
+        "mean_position_error": 1.3279056275581895,
+        "mota_like": 0.73125,
+        "position_rmse": 1.86162700950911,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S2/S2_metrics.json",
+      "metrics_sha256": "22ff5bfd36b321369c42c8974c8d0319f19cd91fba791e5af4c7255fdb84672e",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S2_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 2022,
+        "steps": 80
+      },
+      "runtime_seconds": 0.08755673700034095,
+      "scenario": "S2",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 7.0,
+        "associations_to_true": 74.0,
+        "candidates_born_from_clutter": 115.0,
+        "candidates_born_from_true": 30.0,
+        "total_associations": 81.0,
+        "total_measurements": 226.0,
+        "unmatched_clutter": 115.0,
+        "unmatched_true_detections": 30.0
+      },
+      "diagnostics": {
+        "births": 145.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 5.0,
+        "deletions": 140.0,
+        "final_active_tracks": 5.0,
+        "final_confirmed": 2.0,
+        "lost_events": 25.0,
+        "max_concurrent_confirmed": 3.0,
+        "recoveries": 22.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "3e57debdeecda2f7fc6ffde9c4985f78865666468d6d6caec7c586849114d789",
+        "measurement_hash": "01aae85f933142fd9514173c6ccc8f3a6c3e818bd406c0407040ae7591f60751",
+        "truth_hash": "ba495d2ea2d47750dfd073f1300a32c67810234f37e5dbd2954211a8274a1cf3"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 117.0,
+        "false_negatives": 130.0,
+        "false_positives": 7.0,
+        "fragmentation": 20.0,
+        "frames": 80.0,
+        "id_switches": 5.0,
+        "matched_detections": 110.0,
+        "mean_position_error": 2.0690873365547113,
+        "mota_like": 0.4083333333333333,
+        "position_rmse": 2.858135137347975,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S3/S3_metrics.json",
+      "metrics_sha256": "fe346dfcb953fd9583a15b64852d578096bd1017bff612bd36d7a0c305e56317",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S3_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2033,
+        "steps": 80
+      },
+      "runtime_seconds": 0.042732644998977776,
+      "scenario": "S3",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 62.0,
+        "associations_to_true": 198.0,
+        "candidates_born_from_clutter": 319.0,
+        "candidates_born_from_true": 10.0,
+        "total_associations": 260.0,
+        "total_measurements": 589.0,
+        "unmatched_clutter": 319.0,
+        "unmatched_true_detections": 10.0
+      },
+      "diagnostics": {
+        "births": 329.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 11.0,
+        "deletions": 315.0,
+        "final_active_tracks": 14.0,
+        "final_confirmed": 3.0,
+        "lost_events": 61.0,
+        "max_concurrent_confirmed": 7.0,
+        "recoveries": 53.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "c146ef70b2ee6574b67f0eb9eaa312315ff98b4eb83537ce4dd3587b22e3168c",
+        "measurement_hash": "7d19af489d04f06cf237cebde80f391c7c2908a0632bba80bdc1aa9fba162dfb",
+        "truth_hash": "b5c538c470e86e25467195eeb59169f1669fe9b63cedd1712255252a9017b5c9"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 333.0,
+        "false_negatives": 24.0,
+        "false_positives": 117.0,
+        "fragmentation": 18.0,
+        "frames": 80.0,
+        "id_switches": 9.0,
+        "matched_detections": 216.0,
+        "mean_position_error": 1.3815776175074477,
+        "mota_like": 0.375,
+        "position_rmse": 2.0002578301768144,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S4/S4_metrics.json",
+      "metrics_sha256": "19a395605b7ca583d3862c774bb07c2dd699eeb242051e14f6748ca02b625382",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S4_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 5.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2044,
+        "steps": 80
+      },
+      "runtime_seconds": 0.1657684009987861,
+      "scenario": "S4",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 6.0,
+        "associations_to_true": 285.0,
+        "candidates_born_from_clutter": 122.0,
+        "candidates_born_from_true": 14.0,
+        "total_associations": 291.0,
+        "total_measurements": 427.0,
+        "unmatched_clutter": 122.0,
+        "unmatched_true_detections": 14.0
+      },
+      "diagnostics": {
+        "births": 136.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 5.0,
+        "deletions": 125.0,
+        "final_active_tracks": 11.0,
+        "final_confirmed": 4.0,
+        "lost_events": 24.0,
+        "max_concurrent_confirmed": 5.0,
+        "recoveries": 23.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "31969897192c31338505ef4ae6347df1a6faf28c4a730d9d24bfd08a5cb771b8",
+        "measurement_hash": "2aaa6c347537e9c0105e2b4062bfd2448662fe88691071b433f1fcd7c9e96a61",
+        "truth_hash": "1416e5ea508e9968a8733eaf800aa89b3a65415f7529ce89ea34e3973a514d8b"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 266.0,
+        "false_negatives": 78.0,
+        "false_positives": 9.0,
+        "fragmentation": 19.0,
+        "frames": 80.0,
+        "id_switches": 4.0,
+        "matched_detections": 257.0,
+        "mean_position_error": 1.086848527090573,
+        "mota_like": 0.7283582089552239,
+        "position_rmse": 1.2184859608541327,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S5/S5_metrics.json",
+      "metrics_sha256": "e2e1c7a6cbfb52c102e21446080be4e66ea962afce2843fed32d69704106ad79",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S5_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2055,
+        "steps": 80
+      },
+      "runtime_seconds": 0.08156808500098123,
+      "scenario": "S5",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 13.0,
+        "associations_to_true": 110.0,
+        "candidates_born_from_clutter": 118.0,
+        "candidates_born_from_true": 21.0,
+        "total_associations": 123.0,
+        "total_measurements": 262.0,
+        "unmatched_clutter": 118.0,
+        "unmatched_true_detections": 21.0
+      },
+      "diagnostics": {
+        "births": 139.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 3.0,
+        "deletions": 134.0,
+        "final_active_tracks": 5.0,
+        "final_confirmed": 2.0,
+        "lost_events": 13.0,
+        "max_concurrent_confirmed": 3.0,
+        "recoveries": 12.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "6355182d7c10449b5f86d649cebf4895f5fa08ef85f65106f5e2733b1c73b1a8",
+        "measurement_hash": "a09f5ab1f4a837012637e40da7c8ec9b66ce204f76c85943d385f02b9c4c02c4",
+        "truth_hash": "728be867cbf86838d33aacfb9eeba719d2371d56a709856a10294a4024cd6097"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 80.0,
+        "false_negatives": 106.0,
+        "false_positives": 26.0,
+        "fragmentation": 4.0,
+        "frames": 80.0,
+        "id_switches": 1.0,
+        "matched_detections": 54.0,
+        "mean_position_error": 1.6941811000820164,
+        "mota_like": 0.16874999999999996,
+        "position_rmse": 2.512147469788889,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S6/S6_metrics.json",
+      "metrics_sha256": "1aa9b8ef7d47af3f7b0b7ee67be0ac9c792f1a0eaafe6ab17c2de82e65df3344",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S6_trajectory.png",
+      "recovery": {
+        "details": [
+          {
+            "eligible": true,
+            "end": 46,
+            "post_track_id": 47,
+            "pre_track_id": 47,
+            "recovered": true,
+            "start": 30,
+            "target": 1
+          }
+        ],
+        "opportunities": 1.0,
+        "recovery_rate": 1.0,
+        "successes": 1.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 2066,
+        "steps": 80
+      },
+      "runtime_seconds": 0.04417647999980545,
+      "scenario": "S6",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 661.0,
+        "associations_to_true": 1692.0,
+        "candidates_born_from_clutter": 888.0,
+        "candidates_born_from_true": 90.0,
+        "total_associations": 2353.0,
+        "total_measurements": 3331.0,
+        "unmatched_clutter": 888.0,
+        "unmatched_true_detections": 90.0
+      },
+      "diagnostics": {
+        "births": 978.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 73.0,
+        "deletions": 896.0,
+        "final_active_tracks": 82.0,
+        "final_confirmed": 46.0,
+        "lost_events": 419.0,
+        "max_concurrent_confirmed": 47.0,
+        "recoveries": 392.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "68a467102b4a7aef000e5a83156112f7150d177d1961fe7a28818f258bd294aa",
+        "measurement_hash": "f15fecfd65f6555ec3f125a44cc0dc00eb429f45983ac08bce7e544129c35c8d",
+        "truth_hash": "b09dc670c671a3be04a5974590d4cba6bf46dbcd35a734ed6973f1048eb1eae5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 2783.0,
+        "false_negatives": 228.0,
+        "false_positives": 1011.0,
+        "fragmentation": 74.0,
+        "frames": 80.0,
+        "id_switches": 420.0,
+        "matched_detections": 1772.0,
+        "mean_position_error": 1.9845662138157083,
+        "mota_like": 0.17049999999999998,
+        "position_rmse": 2.74995929980018,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/baseline_distribution/S7/S7_metrics.json",
+      "metrics_sha256": "77a1044a7aab79ec75cc36fec3659aa7479e7e282da328fd66eba9aea3e66d64",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/baseline_distribution/S7_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 2077,
+        "steps": 80
+      },
+      "runtime_seconds": 4.03304407700125,
+      "scenario": "S7",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 0.0,
+        "associations_to_true": 79.0,
+        "candidates_born_from_clutter": 0.0,
+        "candidates_born_from_true": 1.0,
+        "total_associations": 79.0,
+        "total_measurements": 80.0,
+        "unmatched_clutter": 0.0,
+        "unmatched_true_detections": 1.0
+      },
+      "diagnostics": {
+        "births": 1.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 1.0,
+        "deletions": 0.0,
+        "final_active_tracks": 1.0,
+        "final_confirmed": 1.0,
+        "lost_events": 0.0,
+        "max_concurrent_confirmed": 1.0,
+        "recoveries": 0.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee",
+        "measurement_hash": "1e85047420bb1eb63a8462e7e4430aa8e3052fe488584a72c09e0bf2900a8b68",
+        "truth_hash": "c0e9620e7a26136acd276dd0479eed00b14c678316b661166625817dd28645d0"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 79.0,
+        "false_negatives": 1.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 79.0,
+        "mean_position_error": 0.031016331995410526,
+        "mota_like": 0.9875,
+        "position_rmse": 0.1072849005978566,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S0/S0_metrics.json",
+      "metrics_sha256": "f2bdb515e6af40e3dedc4a4809f620481928aa10c844d80524c65a1c31cdcc2e",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S0_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 12000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.011323512000672054,
+      "scenario": "S0",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 520.0,
+        "associations_to_true": 329.0,
+        "candidates_born_from_clutter": 1098.0,
+        "candidates_born_from_true": 35.0,
+        "total_associations": 849.0,
+        "total_measurements": 1982.0,
+        "unmatched_clutter": 1098.0,
+        "unmatched_true_detections": 35.0
+      },
+      "diagnostics": {
+        "births": 1133.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 36.0,
+        "deletions": 1093.0,
+        "final_active_tracks": 40.0,
+        "final_confirmed": 17.0,
+        "lost_events": 186.0,
+        "max_concurrent_confirmed": 22.0,
+        "recoveries": 167.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "32efc344a6a61fa2d26e76e3af05d1f740d42409520c930fe2b3cf68c3f563b3",
+        "measurement_hash": "3f187e25c4623490a7414b8cc257977573f20e80920d0ef2795af737a43eee5d",
+        "truth_hash": "ce25e6e9a925b8c666f2a0fe6e6e3d88ad20b947db17ffe5d1b3bbdc302ba310"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 945.0,
+        "false_negatives": 115.0,
+        "false_positives": 660.0,
+        "fragmentation": 15.0,
+        "frames": 80.0,
+        "id_switches": 53.0,
+        "matched_detections": 285.0,
+        "mean_position_error": 2.2184934801668366,
+        "mota_like": -1.0699999999999998,
+        "position_rmse": 3.328694165930014,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S1/S1_metrics.json",
+      "metrics_sha256": "a73f7c3a2b4ed8b05944113ea1c7bfcde3a3d697142396df47d67878cd97d7e7",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S1_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12011,
+        "steps": 80
+      },
+      "runtime_seconds": 1.406267034000848,
+      "scenario": "S1",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 562.0,
+        "associations_to_true": 247.0,
+        "candidates_born_from_clutter": 1032.0,
+        "candidates_born_from_true": 30.0,
+        "total_associations": 809.0,
+        "total_measurements": 1871.0,
+        "unmatched_clutter": 1032.0,
+        "unmatched_true_detections": 30.0
+      },
+      "diagnostics": {
+        "births": 1062.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 48.0,
+        "deletions": 1015.0,
+        "final_active_tracks": 47.0,
+        "final_confirmed": 22.0,
+        "lost_events": 227.0,
+        "max_concurrent_confirmed": 23.0,
+        "recoveries": 201.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "02ac8b265eb9e9590bdc6bdf44e0d0c2b0680d36e19f97e3d9eb8741d3419fcf",
+        "measurement_hash": "1e240058695b9f3b55650f57b32486280cd1491e9282c754c18345013a5fea2e",
+        "truth_hash": "c7a417147ccb1767d6113b10879bb8469f732bab25b4d6dbeb68e714ab868fb8"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 1060.0,
+        "false_negatives": 58.0,
+        "false_positives": 798.0,
+        "fragmentation": 17.0,
+        "frames": 80.0,
+        "id_switches": 36.0,
+        "matched_detections": 262.0,
+        "mean_position_error": 2.44462633990841,
+        "mota_like": -1.7875,
+        "position_rmse": 3.276302559292747,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S2/S2_metrics.json",
+      "metrics_sha256": "835a857b682977cfd5f35a17f338b5bc0f4e4d2ee4585f99254f7e93f066ce70",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S2_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 12022,
+        "steps": 80
+      },
+      "runtime_seconds": 1.408226576000743,
+      "scenario": "S2",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 491.0,
+        "associations_to_true": 86.0,
+        "candidates_born_from_clutter": 1050.0,
+        "candidates_born_from_true": 32.0,
+        "total_associations": 577.0,
+        "total_measurements": 1659.0,
+        "unmatched_clutter": 1050.0,
+        "unmatched_true_detections": 32.0
+      },
+      "diagnostics": {
+        "births": 1082.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 36.0,
+        "deletions": 1041.0,
+        "final_active_tracks": 41.0,
+        "final_confirmed": 17.0,
+        "lost_events": 183.0,
+        "max_concurrent_confirmed": 21.0,
+        "recoveries": 164.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "359e79925806ee61a8885f41f4ac829aaf391a2fb8bd1c9dd41d2f4327affa6a",
+        "measurement_hash": "f797736e461ce54f19096ac83b39a4fabbc52e0168a955f80d898be15f285735",
+        "truth_hash": "75a555bd6e7bbcde8b13bf7e640b87ec8aa1746562220a0a76f80a0748c7d0e5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 837.0,
+        "false_negatives": 77.0,
+        "false_positives": 674.0,
+        "fragmentation": 27.0,
+        "frames": 80.0,
+        "id_switches": 25.0,
+        "matched_detections": 163.0,
+        "mean_position_error": 4.429664801801562,
+        "mota_like": -2.2333333333333334,
+        "position_rmse": 5.795972665031654,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S3/S3_metrics.json",
+      "metrics_sha256": "b9ac2e598d871b56199ec21c2a52b53c1140929198023053ce48dd31bd04fbdf",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S3_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12033,
+        "steps": 80
+      },
+      "runtime_seconds": 1.0442637400010426,
+      "scenario": "S3",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 494.0,
+        "associations_to_true": 192.0,
+        "candidates_born_from_clutter": 1099.0,
+        "candidates_born_from_true": 16.0,
+        "total_associations": 686.0,
+        "total_measurements": 1801.0,
+        "unmatched_clutter": 1099.0,
+        "unmatched_true_detections": 16.0
+      },
+      "diagnostics": {
+        "births": 1115.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 35.0,
+        "deletions": 1072.0,
+        "final_active_tracks": 43.0,
+        "final_confirmed": 22.0,
+        "lost_events": 183.0,
+        "max_concurrent_confirmed": 22.0,
+        "recoveries": 170.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "dd50dd126856f29c81144376b0cf5538bb29e1e541fed6e48a31a34497f5bb06",
+        "measurement_hash": "90929c037a922ccbbf8321ac501b47efd005f6de1199478180230d33e9d4b5a5",
+        "truth_hash": "b9ba08729876bede29e04d9d55aecadf5c2a0bee476904b04727bdc27b74d7fe"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 870.0,
+        "false_negatives": 34.0,
+        "false_positives": 664.0,
+        "fragmentation": 14.0,
+        "frames": 80.0,
+        "id_switches": 28.0,
+        "matched_detections": 206.0,
+        "mean_position_error": 1.873647556357389,
+        "mota_like": -2.025,
+        "position_rmse": 2.6604695651989854,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S4/S4_metrics.json",
+      "metrics_sha256": "4f8898fedc6cde70c1d57fcc1dc41a183006c674c08430ffce441ec4bc0a83e6",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S4_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12044,
+        "steps": 80
+      },
+      "runtime_seconds": 1.1688052070003323,
+      "scenario": "S4",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 526.0,
+        "associations_to_true": 282.0,
+        "candidates_born_from_clutter": 1062.0,
+        "candidates_born_from_true": 16.0,
+        "total_associations": 808.0,
+        "total_measurements": 1886.0,
+        "unmatched_clutter": 1062.0,
+        "unmatched_true_detections": 16.0
+      },
+      "diagnostics": {
+        "births": 1078.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 42.0,
+        "deletions": 1030.0,
+        "final_active_tracks": 48.0,
+        "final_confirmed": 21.0,
+        "lost_events": 248.0,
+        "max_concurrent_confirmed": 28.0,
+        "recoveries": 227.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "8a2519245eee7a807e68678aaa111b9c5b16d3fabd9cc0491f7f500b2dfa5fd8",
+        "measurement_hash": "6f9282cb08b19108772448fe052ab81657897a2e794bf62f8dcf941645ab0767",
+        "truth_hash": "435e6f91cad9ae8e7e9f11a5c925dcc5b80ee37994e160a9d8e5505a37e4f57c"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 1157.0,
+        "false_negatives": 48.0,
+        "false_positives": 870.0,
+        "fragmentation": 13.0,
+        "frames": 80.0,
+        "id_switches": 29.0,
+        "matched_detections": 287.0,
+        "mean_position_error": 1.581338851407788,
+        "mota_like": -1.8268656716417913,
+        "position_rmse": 2.151798666604038,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S5/S5_metrics.json",
+      "metrics_sha256": "155a0d8bac4e356dfa500e8d09790e8f1649438c415a780e40c5cecf1a723868",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S5_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12055,
+        "steps": 80
+      },
+      "runtime_seconds": 1.4013826880000124,
+      "scenario": "S5",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 554.0,
+        "associations_to_true": 118.0,
+        "candidates_born_from_clutter": 1003.0,
+        "candidates_born_from_true": 11.0,
+        "total_associations": 672.0,
+        "total_measurements": 1686.0,
+        "unmatched_clutter": 1003.0,
+        "unmatched_true_detections": 11.0
+      },
+      "diagnostics": {
+        "births": 1014.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 37.0,
+        "deletions": 968.0,
+        "final_active_tracks": 46.0,
+        "final_confirmed": 13.0,
+        "lost_events": 219.0,
+        "max_concurrent_confirmed": 22.0,
+        "recoveries": 195.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "9d1094e5e0f45e4ffc64ae25ad5073b980a24008fee77f3fe91848f2e9b2f822",
+        "measurement_hash": "acdc51f317d391d200a6960b79aa934f74f6f1748ee73341d4ca8dcbf8cfa900",
+        "truth_hash": "08755091550c2d83b732330b70aaf566750d81c27cda6207858e0fde993d04c5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 999.0,
+        "false_negatives": 47.0,
+        "false_positives": 886.0,
+        "fragmentation": 10.0,
+        "frames": 80.0,
+        "id_switches": 23.0,
+        "matched_detections": 113.0,
+        "mean_position_error": 2.0701389907883074,
+        "mota_like": -4.975,
+        "position_rmse": 2.947041156444191,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S6/S6_metrics.json",
+      "metrics_sha256": "3bd79df528d3a05397d0e5d960e7d4ce64eeeaeb7e422cd032ba115ece277ef0",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S6_trajectory.png",
+      "recovery": {
+        "details": [
+          {
+            "eligible": true,
+            "end": 46,
+            "post_track_id": 652,
+            "pre_track_id": 214,
+            "recovered": false,
+            "start": 30,
+            "target": 1
+          }
+        ],
+        "opportunities": 1.0,
+        "recovery_rate": 0.0,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 12066,
+        "steps": 80
+      },
+      "runtime_seconds": 1.1602290560003894,
+      "scenario": "S6",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 703.0,
+        "associations_to_true": 1701.0,
+        "candidates_born_from_clutter": 851.0,
+        "candidates_born_from_true": 90.0,
+        "total_associations": 2404.0,
+        "total_measurements": 3345.0,
+        "unmatched_clutter": 851.0,
+        "unmatched_true_detections": 90.0
+      },
+      "diagnostics": {
+        "births": 941.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 82.0,
+        "deletions": 861.0,
+        "final_active_tracks": 80.0,
+        "final_confirmed": 56.0,
+        "lost_events": 468.0,
+        "max_concurrent_confirmed": 56.0,
+        "recoveries": 442.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "8df7520f2e457536bf23797f4dc77a76cbbf4ca609789fdf481e4c73d70100df",
+        "measurement_hash": "853bec63cdf793959df2e15728d5611b6b36548ca2e484ef475f7c59ad927891",
+        "truth_hash": "da118a6dc0c6736eed3110fd36e94c2772e94fb8797ba4b2a5950fcecc6fef88"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 3003.0,
+        "false_negatives": 209.0,
+        "false_positives": 1212.0,
+        "fragmentation": 94.0,
+        "frames": 80.0,
+        "id_switches": 491.0,
+        "matched_detections": 1791.0,
+        "mean_position_error": 2.0977477909182984,
+        "mota_like": 0.04400000000000004,
+        "position_rmse": 2.866971271379176,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/A_missed_decay/paper_assumption_v1/S7/S7_metrics.json",
+      "metrics_sha256": "d64ceea284662606918afcd3e6d9480b3a889eac66518fdd7b92a9b872fffbfe",
+      "plot_file": "outputs/figures/phase3_1/A_missed_decay/paper_assumption_v1/S7_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 12077,
+        "steps": 80
+      },
+      "runtime_seconds": 4.300821838000047,
+      "scenario": "S7",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "likelihood_penalty",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "A_missed_decay"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 0.0,
+        "associations_to_true": 79.0,
+        "candidates_born_from_clutter": 0.0,
+        "candidates_born_from_true": 1.0,
+        "total_associations": 79.0,
+        "total_measurements": 80.0,
+        "unmatched_clutter": 0.0,
+        "unmatched_true_detections": 1.0
+      },
+      "diagnostics": {
+        "births": 1.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 1.0,
+        "deletions": 0.0,
+        "final_active_tracks": 1.0,
+        "final_confirmed": 1.0,
+        "lost_events": 0.0,
+        "max_concurrent_confirmed": 1.0,
+        "recoveries": 0.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee",
+        "measurement_hash": "1e85047420bb1eb63a8462e7e4430aa8e3052fe488584a72c09e0bf2900a8b68",
+        "truth_hash": "c0e9620e7a26136acd276dd0479eed00b14c678316b661166625817dd28645d0"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 79.0,
+        "false_negatives": 1.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 79.0,
+        "mean_position_error": 0.031016331995410526,
+        "mota_like": 0.9875,
+        "position_rmse": 0.1072849005978566,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S0/S0_metrics.json",
+      "metrics_sha256": "2df26218f75a5ea77d127c41bad1bf91fb25d6934857ac548f54397e68568a56",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S0_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 2000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.01135767300002044,
+      "scenario": "S0",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 38.0,
+        "associations_to_true": 343.0,
+        "candidates_born_from_clutter": 75.0,
+        "candidates_born_from_true": 9.0,
+        "total_associations": 381.0,
+        "total_measurements": 465.0,
+        "unmatched_clutter": 75.0,
+        "unmatched_true_detections": 9.0
+      },
+      "diagnostics": {
+        "births": 84.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 23.0,
+        "deletions": 62.0,
+        "final_active_tracks": 22.0,
+        "final_confirmed": 12.0,
+        "lost_events": 36.0,
+        "max_concurrent_confirmed": 12.0,
+        "recoveries": 25.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "f483f7827e8aad7b7315371064d71c0b2fb6440743c6fb4acffb6f8237211b93",
+        "measurement_hash": "83caf9f86d81d4a53f5a048cd08845e9f9ffa16e659b0d796e3802ee36e90869",
+        "truth_hash": "b41f83aa07c02ff858c1236b3d3cfe18107257e45b1500bbbc057fc6b8ec6e23"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 639.0,
+        "false_negatives": 40.0,
+        "false_positives": 279.0,
+        "fragmentation": 2.0,
+        "frames": 80.0,
+        "id_switches": 37.0,
+        "matched_detections": 360.0,
+        "mean_position_error": 1.3707846635366754,
+        "mota_like": 0.10999999999999999,
+        "position_rmse": 1.7494752657075114,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S1/S1_metrics.json",
+      "metrics_sha256": "4bc90f90b77a2bd07eda2aab61e670c44c2b3ffebffa7dabbc98d8da67d641d6",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S1_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2011,
+        "steps": 80
+      },
+      "runtime_seconds": 0.2003007669991348,
+      "scenario": "S1",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 44.0,
+        "associations_to_true": 287.0,
+        "candidates_born_from_clutter": 80.0,
+        "candidates_born_from_true": 8.0,
+        "total_associations": 331.0,
+        "total_measurements": 419.0,
+        "unmatched_clutter": 80.0,
+        "unmatched_true_detections": 8.0
+      },
+      "diagnostics": {
+        "births": 88.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 21.0,
+        "deletions": 66.0,
+        "final_active_tracks": 22.0,
+        "final_confirmed": 8.0,
+        "lost_events": 46.0,
+        "max_concurrent_confirmed": 12.0,
+        "recoveries": 33.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "afbc5364bb9a0e2f2d153c8b0ba742571d455e3d4de9c5a7cf11236c2a4f09fb",
+        "measurement_hash": "bc643e31b354c1a6721244e6bbd06d5932d2c2f78721890518030b54dcdb2282",
+        "truth_hash": "db2e59d1a2baa273f4d296378cdfa1ab83fb74a6b1df9e46e79d1ee41195298e"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 662.0,
+        "false_negatives": 22.0,
+        "false_positives": 364.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 35.0,
+        "matched_detections": 298.0,
+        "mean_position_error": 1.3440601761189128,
+        "mota_like": -0.31562500000000004,
+        "position_rmse": 1.5714592293530376,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S2/S2_metrics.json",
+      "metrics_sha256": "77615c19dd8ff5f08f583f5c7cb4dbc832f49f0639aac6443bc2d3549c988cbb",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S2_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 2022,
+        "steps": 80
+      },
+      "runtime_seconds": 0.19315637599902402,
+      "scenario": "S2",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 36.0,
+        "associations_to_true": 101.0,
+        "candidates_born_from_clutter": 86.0,
+        "candidates_born_from_true": 3.0,
+        "total_associations": 137.0,
+        "total_measurements": 226.0,
+        "unmatched_clutter": 86.0,
+        "unmatched_true_detections": 3.0
+      },
+      "diagnostics": {
+        "births": 89.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 17.0,
+        "deletions": 72.0,
+        "final_active_tracks": 17.0,
+        "final_confirmed": 5.0,
+        "lost_events": 27.0,
+        "max_concurrent_confirmed": 8.0,
+        "recoveries": 15.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "3e57debdeecda2f7fc6ffde9c4985f78865666468d6d6caec7c586849114d789",
+        "measurement_hash": "01aae85f933142fd9514173c6ccc8f3a6c3e818bd406c0407040ae7591f60751",
+        "truth_hash": "ba495d2ea2d47750dfd073f1300a32c67810234f37e5dbd2954211a8274a1cf3"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 405.0,
+        "false_negatives": 18.0,
+        "false_positives": 183.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 5.0,
+        "matched_detections": 222.0,
+        "mean_position_error": 1.6835854502713445,
+        "mota_like": 0.14166666666666672,
+        "position_rmse": 2.0025044540309738,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S3/S3_metrics.json",
+      "metrics_sha256": "7a21bcf3642d710d623b7171720cff58eb183b74c19f764d88c08395a2829a03",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S3_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2033,
+        "steps": 80
+      },
+      "runtime_seconds": 0.09985409199907735,
+      "scenario": "S3",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 259.0,
+        "associations_to_true": 203.0,
+        "candidates_born_from_clutter": 122.0,
+        "candidates_born_from_true": 5.0,
+        "total_associations": 462.0,
+        "total_measurements": 589.0,
+        "unmatched_clutter": 122.0,
+        "unmatched_true_detections": 5.0
+      },
+      "diagnostics": {
+        "births": 127.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 52.0,
+        "deletions": 74.0,
+        "final_active_tracks": 53.0,
+        "final_confirmed": 24.0,
+        "lost_events": 165.0,
+        "max_concurrent_confirmed": 32.0,
+        "recoveries": 137.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "c146ef70b2ee6574b67f0eb9eaa312315ff98b4eb83537ce4dd3587b22e3168c",
+        "measurement_hash": "7d19af489d04f06cf237cebde80f391c7c2908a0632bba80bdc1aa9fba162dfb",
+        "truth_hash": "b5c538c470e86e25467195eeb59169f1669fe9b63cedd1712255252a9017b5c9"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 1506.0,
+        "false_negatives": 5.0,
+        "false_positives": 1271.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 32.0,
+        "matched_detections": 235.0,
+        "mean_position_error": 1.73265730969818,
+        "mota_like": -4.45,
+        "position_rmse": 2.2442110646880544,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S4/S4_metrics.json",
+      "metrics_sha256": "24b80dd85bcc2a911cd0013ad0a8e16a12f4520395266eb83d282da29177650a",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S4_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 5.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 2044,
+        "steps": 80
+      },
+      "runtime_seconds": 0.5065925409999181,
+      "scenario": "S4",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 53.0,
+        "associations_to_true": 291.0,
+        "candidates_born_from_clutter": 75.0,
+        "candidates_born_from_true": 8.0,
+        "total_associations": 344.0,
+        "total_measurements": 427.0,
+        "unmatched_clutter": 75.0,
+        "unmatched_true_detections": 8.0
+      },
+      "diagnostics": {
+        "births": 83.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 28.0,
+        "deletions": 57.0,
+        "final_active_tracks": 26.0,
+        "final_confirmed": 13.0,
+        "lost_events": 58.0,
+        "max_concurrent_confirmed": 14.0,
+        "recoveries": 43.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "31969897192c31338505ef4ae6347df1a6faf28c4a730d9d24bfd08a5cb771b8",
+        "measurement_hash": "2aaa6c347537e9c0105e2b4062bfd2448662fe88691071b433f1fcd7c9e96a61",
+        "truth_hash": "1416e5ea508e9968a8733eaf800aa89b3a65415f7529ce89ea34e3973a514d8b"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 673.0,
+        "false_negatives": 47.0,
+        "false_positives": 385.0,
+        "fragmentation": 3.0,
+        "frames": 80.0,
+        "id_switches": 23.0,
+        "matched_detections": 288.0,
+        "mean_position_error": 1.2816620665861533,
+        "mota_like": -0.3582089552238805,
+        "position_rmse": 1.5633641354669505,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S5/S5_metrics.json",
+      "metrics_sha256": "b9d779f28d6197ffdd10cf9de58470498b6142489690b7125b2d13b3cb430274",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S5_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 2055,
+        "steps": 80
+      },
+      "runtime_seconds": 0.20785343699935765,
+      "scenario": "S5",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 44.0,
+        "associations_to_true": 123.0,
+        "candidates_born_from_clutter": 87.0,
+        "candidates_born_from_true": 8.0,
+        "total_associations": 167.0,
+        "total_measurements": 262.0,
+        "unmatched_clutter": 87.0,
+        "unmatched_true_detections": 8.0
+      },
+      "diagnostics": {
+        "births": 95.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 16.0,
+        "deletions": 83.0,
+        "final_active_tracks": 12.0,
+        "final_confirmed": 4.0,
+        "lost_events": 36.0,
+        "max_concurrent_confirmed": 9.0,
+        "recoveries": 24.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "6355182d7c10449b5f86d649cebf4895f5fa08ef85f65106f5e2733b1c73b1a8",
+        "measurement_hash": "a09f5ab1f4a837012637e40da7c8ec9b66ce204f76c85943d385f02b9c4c02c4",
+        "truth_hash": "728be867cbf86838d33aacfb9eeba719d2371d56a709856a10294a4024cd6097"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 398.0,
+        "false_negatives": 37.0,
+        "false_positives": 275.0,
+        "fragmentation": 2.0,
+        "frames": 80.0,
+        "id_switches": 7.0,
+        "matched_detections": 123.0,
+        "mean_position_error": 1.6400076455295,
+        "mota_like": -0.9937499999999999,
+        "position_rmse": 2.144196309117235,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S6/S6_metrics.json",
+      "metrics_sha256": "8a069b1ddfa66c9f6d0106dbaad88b0a618657ebd3fbba3970819ba05ed1f73e",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S6_trajectory.png",
+      "recovery": {
+        "details": [
+          {
+            "eligible": true,
+            "end": 46,
+            "post_track_id": 37,
+            "pre_track_id": 37,
+            "recovered": true,
+            "start": 30,
+            "target": 1
+          }
+        ],
+        "opportunities": 1.0,
+        "recovery_rate": 1.0,
+        "successes": 1.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 1.5,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 2066,
+        "steps": 80
+      },
+      "runtime_seconds": 0.12108645800071827,
+      "scenario": "S6",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1353.0,
+        "associations_to_true": 1734.0,
+        "candidates_born_from_clutter": 196.0,
+        "candidates_born_from_true": 48.0,
+        "total_associations": 3087.0,
+        "total_measurements": 3331.0,
+        "unmatched_clutter": 196.0,
+        "unmatched_true_detections": 48.0
+      },
+      "diagnostics": {
+        "births": 244.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 182.0,
+        "deletions": 94.0,
+        "final_active_tracks": 150.0,
+        "final_confirmed": 104.0,
+        "lost_events": 500.0,
+        "max_concurrent_confirmed": 115.0,
+        "recoveries": 422.0
+      },
+      "distribution": "baseline_distribution",
+      "input_hashes": {
+        "label_hash": "68a467102b4a7aef000e5a83156112f7150d177d1961fe7a28818f258bd294aa",
+        "measurement_hash": "f15fecfd65f6555ec3f125a44cc0dc00eb429f45983ac08bce7e544129c35c8d",
+        "truth_hash": "b09dc670c671a3be04a5974590d4cba6bf46dbcd35a734ed6973f1048eb1eae5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 7603.0,
+        "false_negatives": 71.0,
+        "false_positives": 5674.0,
+        "fragmentation": 4.0,
+        "frames": 80.0,
+        "id_switches": 463.0,
+        "matched_detections": 1929.0,
+        "mean_position_error": 1.837326552874312,
+        "mota_like": -2.104,
+        "position_rmse": 2.358078955883754,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/baseline_distribution/S7/S7_metrics.json",
+      "metrics_sha256": "9d74981b8884487299af542be113eb81bd35e5e890032dc0d2ab6b9899f57892",
+      "plot_file": "outputs/figures/phase3_1/B_documented/baseline_distribution/S7_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "baseline_distribution",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 2077,
+        "steps": 80
+      },
+      "runtime_seconds": 8.348246401001234,
+      "scenario": "S7",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 0.0,
+        "associations_to_true": 79.0,
+        "candidates_born_from_clutter": 0.0,
+        "candidates_born_from_true": 1.0,
+        "total_associations": 79.0,
+        "total_measurements": 80.0,
+        "unmatched_clutter": 0.0,
+        "unmatched_true_detections": 1.0
+      },
+      "diagnostics": {
+        "births": 1.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 1.0,
+        "deletions": 0.0,
+        "final_active_tracks": 1.0,
+        "final_confirmed": 1.0,
+        "lost_events": 0.0,
+        "max_concurrent_confirmed": 1.0,
+        "recoveries": 0.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "9e132485d5107211de325a45e7917cbe3e4b5b9cde3e4ee91d7d2102317759ee",
+        "measurement_hash": "1e85047420bb1eb63a8462e7e4430aa8e3052fe488584a72c09e0bf2900a8b68",
+        "truth_hash": "c0e9620e7a26136acd276dd0479eed00b14c678316b661166625817dd28645d0"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 79.0,
+        "false_negatives": 1.0,
+        "false_positives": 0.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 0.0,
+        "matched_detections": 79.0,
+        "mean_position_error": 0.031016331995410526,
+        "mota_like": 0.9875,
+        "position_rmse": 0.1072849005978566,
+        "truth_object_frames": 80.0,
+        "truth_objects_per_frame": 1.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S0/S0_metrics.json",
+      "metrics_sha256": "5e3879643bad68af399a4791017d318c3435ae8790c7e07b29ca02d7a089ed31",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S0_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 0.0,
+        "description": "Single target, no measurement/process noise and no clutter.",
+        "detection_probability": 1.0,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 0.0,
+        "motion": "solo",
+        "name": "S0",
+        "num_targets": 1,
+        "process_accel_std": 0.0,
+        "seed": 12000,
+        "steps": 80
+      },
+      "runtime_seconds": 0.011739878998923814,
+      "scenario": "S0",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1397.0,
+        "associations_to_true": 357.0,
+        "candidates_born_from_clutter": 221.0,
+        "candidates_born_from_true": 7.0,
+        "total_associations": 1754.0,
+        "total_measurements": 1982.0,
+        "unmatched_clutter": 221.0,
+        "unmatched_true_detections": 7.0
+      },
+      "diagnostics": {
+        "births": 228.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 167.0,
+        "deletions": 105.0,
+        "final_active_tracks": 123.0,
+        "final_confirmed": 80.0,
+        "lost_events": 493.0,
+        "max_concurrent_confirmed": 94.0,
+        "recoveries": 406.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "32efc344a6a61fa2d26e76e3af05d1f740d42409520c930fe2b3cf68c3f563b3",
+        "measurement_hash": "3f187e25c4623490a7414b8cc257977573f20e80920d0ef2795af737a43eee5d",
+        "truth_hash": "ce25e6e9a925b8c666f2a0fe6e6e3d88ad20b947db17ffe5d1b3bbdc302ba310"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5767.0,
+        "false_negatives": 10.0,
+        "false_positives": 5377.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 68.0,
+        "matched_detections": 390.0,
+        "mean_position_error": 1.6946112889135094,
+        "mota_like": -12.6375,
+        "position_rmse": 2.1693516541726305,
+        "truth_object_frames": 400.0,
+        "truth_objects_per_frame": 5.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S1/S1_metrics.json",
+      "metrics_sha256": "3b60f91cd0cbc8d8121fa6ebe3ec0566afdcd2ca1faf22578884ac7f88b2d956",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S1_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple separated targets on non-crossing parallel lanes.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S1",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12011,
+        "steps": 80
+      },
+      "runtime_seconds": 4.29060811599993,
+      "scenario": "S1",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1372.0,
+        "associations_to_true": 270.0,
+        "candidates_born_from_clutter": 222.0,
+        "candidates_born_from_true": 7.0,
+        "total_associations": 1642.0,
+        "total_measurements": 1871.0,
+        "unmatched_clutter": 222.0,
+        "unmatched_true_detections": 7.0
+      },
+      "diagnostics": {
+        "births": 229.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 163.0,
+        "deletions": 104.0,
+        "final_active_tracks": 125.0,
+        "final_confirmed": 75.0,
+        "lost_events": 482.0,
+        "max_concurrent_confirmed": 87.0,
+        "recoveries": 394.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "02ac8b265eb9e9590bdc6bdf44e0d0c2b0680d36e19f97e3d9eb8741d3419fcf",
+        "measurement_hash": "1e240058695b9f3b55650f57b32486280cd1491e9282c754c18345013a5fea2e",
+        "truth_hash": "c7a417147ccb1767d6113b10879bb8469f732bab25b4d6dbeb68e714ab868fb8"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5460.0,
+        "false_negatives": 10.0,
+        "false_positives": 5150.0,
+        "fragmentation": 1.0,
+        "frames": 80.0,
+        "id_switches": 64.0,
+        "matched_detections": 310.0,
+        "mean_position_error": 1.9565099488674473,
+        "mota_like": -15.325,
+        "position_rmse": 2.3618962729620345,
+        "truth_object_frames": 320.0,
+        "truth_objects_per_frame": 4.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S2/S2_metrics.json",
+      "metrics_sha256": "349de03af31163730011f22ebfb932f071e8e37a33d287c2551a5209b134c0ce",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S2_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Multiple targets whose straight-line paths cross.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "crossing",
+        "name": "S2",
+        "num_targets": 4,
+        "process_accel_std": 0.08,
+        "seed": 12022,
+        "steps": 80
+      },
+      "runtime_seconds": 3.941939309999725,
+      "scenario": "S2",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1327.0,
+        "associations_to_true": 115.0,
+        "candidates_born_from_clutter": 214.0,
+        "candidates_born_from_true": 3.0,
+        "total_associations": 1442.0,
+        "total_measurements": 1659.0,
+        "unmatched_clutter": 214.0,
+        "unmatched_true_detections": 3.0
+      },
+      "diagnostics": {
+        "births": 217.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 158.0,
+        "deletions": 94.0,
+        "final_active_tracks": 123.0,
+        "final_confirmed": 71.0,
+        "lost_events": 500.0,
+        "max_concurrent_confirmed": 87.0,
+        "recoveries": 413.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "359e79925806ee61a8885f41f4ac829aaf391a2fb8bd1c9dd41d2f4327affa6a",
+        "measurement_hash": "f797736e461ce54f19096ac83b39a4fabbc52e0168a955f80d898be15f285735",
+        "truth_hash": "75a555bd6e7bbcde8b13bf7e640b87ec8aa1746562220a0a76f80a0748c7d0e5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5281.0,
+        "false_negatives": 9.0,
+        "false_positives": 5050.0,
+        "fragmentation": 2.0,
+        "frames": 80.0,
+        "id_switches": 48.0,
+        "matched_detections": 231.0,
+        "mean_position_error": 2.254229825954207,
+        "mota_like": -20.279166666666665,
+        "position_rmse": 2.803712303363994,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S3/S3_metrics.json",
+      "metrics_sha256": "29b70b3a2fbec22e06a2cccebfce604ffbc830a89e9040c0519516eab9990cc8",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S3_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Controlled missed detections: reduced per-frame detection probability.",
+        "detection_probability": 0.45,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S3",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12033,
+        "steps": 80
+      },
+      "runtime_seconds": 3.4156667229999584,
+      "scenario": "S3",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1378.0,
+        "associations_to_true": 202.0,
+        "candidates_born_from_clutter": 215.0,
+        "candidates_born_from_true": 6.0,
+        "total_associations": 1580.0,
+        "total_measurements": 1801.0,
+        "unmatched_clutter": 215.0,
+        "unmatched_true_detections": 6.0
+      },
+      "diagnostics": {
+        "births": 221.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 158.0,
+        "deletions": 93.0,
+        "final_active_tracks": 128.0,
+        "final_confirmed": 82.0,
+        "lost_events": 489.0,
+        "max_concurrent_confirmed": 90.0,
+        "recoveries": 413.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "dd50dd126856f29c81144376b0cf5538bb29e1e541fed6e48a31a34497f5bb06",
+        "measurement_hash": "90929c037a922ccbbf8321ac501b47efd005f6de1199478180230d33e9d4b5a5",
+        "truth_hash": "b9ba08729876bede29e04d9d55aecadf5c2a0bee476904b04727bdc27b74d7fe"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5457.0,
+        "false_negatives": 9.0,
+        "false_positives": 5226.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 33.0,
+        "matched_detections": 231.0,
+        "mean_position_error": 1.5866950632162937,
+        "mota_like": -20.95,
+        "position_rmse": 1.883186391107652,
+        "truth_object_frames": 240.0,
+        "truth_objects_per_frame": 3.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S4/S4_metrics.json",
+      "metrics_sha256": "74157283fffcd37a6d8da4149319ddd397ca7b37ff4d55860f3eaad65a477188",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S4_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "False alarms / clutter at a rate above the low-noise baseline.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S4",
+        "num_targets": 3,
+        "process_accel_std": 0.08,
+        "seed": 12044,
+        "steps": 80
+      },
+      "runtime_seconds": 3.750429517000157,
+      "scenario": "S4",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1368.0,
+        "associations_to_true": 294.0,
+        "candidates_born_from_clutter": 220.0,
+        "candidates_born_from_true": 4.0,
+        "total_associations": 1662.0,
+        "total_measurements": 1886.0,
+        "unmatched_clutter": 220.0,
+        "unmatched_true_detections": 4.0
+      },
+      "diagnostics": {
+        "births": 224.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 157.0,
+        "deletions": 95.0,
+        "final_active_tracks": 129.0,
+        "final_confirmed": 84.0,
+        "lost_events": 471.0,
+        "max_concurrent_confirmed": 93.0,
+        "recoveries": 398.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "8a2519245eee7a807e68678aaa111b9c5b16d3fabd9cc0491f7f500b2dfa5fd8",
+        "measurement_hash": "6f9282cb08b19108772448fe052ab81657897a2e794bf62f8dcf941645ab0767",
+        "truth_hash": "435e6f91cad9ae8e7e9f11a5c925dcc5b80ee37994e160a9d8e5505a37e4f57c"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5561.0,
+        "false_negatives": 4.0,
+        "false_positives": 5230.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 58.0,
+        "matched_detections": 331.0,
+        "mean_position_error": 1.7798948556167622,
+        "mota_like": -14.797014925373134,
+        "position_rmse": 2.473365531682706,
+        "truth_object_frames": 335.0,
+        "truth_objects_per_frame": 4.1875
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S5/S5_metrics.json",
+      "metrics_sha256": "a63f873dc1da517845d35092c3c5a9c66929ea132ae504c2a86ebcc7d1bd1be6",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S5_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Staggered target births and deaths across the horizon.",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": [
+          [
+            0,
+            80
+          ],
+          [
+            0,
+            80
+          ],
+          [
+            10,
+            80
+          ],
+          [
+            5,
+            60
+          ],
+          [
+            20,
+            70
+          ]
+        ],
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S5",
+        "num_targets": 5,
+        "process_accel_std": 0.08,
+        "seed": 12055,
+        "steps": 80
+      },
+      "runtime_seconds": 3.918201078999118,
+      "scenario": "S5",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1330.0,
+        "associations_to_true": 126.0,
+        "candidates_born_from_clutter": 227.0,
+        "candidates_born_from_true": 3.0,
+        "total_associations": 1456.0,
+        "total_measurements": 1686.0,
+        "unmatched_clutter": 227.0,
+        "unmatched_true_detections": 3.0
+      },
+      "diagnostics": {
+        "births": 230.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 162.0,
+        "deletions": 109.0,
+        "final_active_tracks": 121.0,
+        "final_confirmed": 74.0,
+        "lost_events": 474.0,
+        "max_concurrent_confirmed": 87.0,
+        "recoveries": 386.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "9d1094e5e0f45e4ffc64ae25ad5073b980a24008fee77f3fe91848f2e9b2f822",
+        "measurement_hash": "acdc51f317d391d200a6960b79aa934f74f6f1748ee73341d4ca8dcbf8cfa900",
+        "truth_hash": "08755091550c2d83b732330b70aaf566750d81c27cda6207858e0fde993d04c5"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 5169.0,
+        "false_negatives": 7.0,
+        "false_positives": 5016.0,
+        "fragmentation": 0.0,
+        "frames": 80.0,
+        "id_switches": 30.0,
+        "matched_detections": 153.0,
+        "mean_position_error": 2.1510353443296535,
+        "mota_like": -30.58125,
+        "position_rmse": 2.7103411111613105,
+        "truth_object_frames": 160.0,
+        "truth_objects_per_frame": 2.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S6/S6_metrics.json",
+      "metrics_sha256": "78a6f6577ab764efd96a1869f766125b72952375d248b640abae259f34b43d2e",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S6_trajectory.png",
+      "recovery": {
+        "details": [
+          {
+            "eligible": true,
+            "end": 46,
+            "post_track_id": 105,
+            "pre_track_id": 105,
+            "recovered": true,
+            "start": 30,
+            "target": 1
+          }
+        ],
+        "opportunities": 1.0,
+        "recovery_rate": 1.0,
+        "successes": 1.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Two targets; one target has a short detection gap then reappears.",
+        "detection_probability": 0.9,
+        "disappearance": [
+          [
+            1,
+            30,
+            46
+          ]
+        ],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S6",
+        "num_targets": 2,
+        "process_accel_std": 0.08,
+        "seed": 12066,
+        "steps": 80
+      },
+      "runtime_seconds": 3.444083446998775,
+      "scenario": "S6",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    },
+    {
+      "audit": {
+        "associations_to_clutter": 1355.0,
+        "associations_to_true": 1740.0,
+        "candidates_born_from_clutter": 199.0,
+        "candidates_born_from_true": 51.0,
+        "total_associations": 3095.0,
+        "total_measurements": 3345.0,
+        "unmatched_clutter": 199.0,
+        "unmatched_true_detections": 51.0
+      },
+      "diagnostics": {
+        "births": 250.0,
+        "config": {
+          "candidate_expiry": 6,
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "lost_expiry": 15,
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "max_missed": 5,
+          "measurement_noise_std": 1.5,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02,
+          "physical_gate": 10.0,
+          "process_accel_std": 0.1,
+          "reappearance_reward": 0.0,
+          "report_lost": false,
+          "score_confirm": 1.0,
+          "score_decay": 0.95,
+          "score_history_lag": 4
+        },
+        "confirmations": 197.0,
+        "deletions": 98.0,
+        "final_active_tracks": 152.0,
+        "final_confirmed": 115.0,
+        "lost_events": 518.0,
+        "max_concurrent_confirmed": 121.0,
+        "recoveries": 436.0
+      },
+      "distribution": "paper_assumption_v1",
+      "input_hashes": {
+        "label_hash": "8df7520f2e457536bf23797f4dc77a76cbbf4ca609789fdf481e4c73d70100df",
+        "measurement_hash": "853bec63cdf793959df2e15728d5611b6b36548ca2e484ef475f7c59ad927891",
+        "truth_hash": "da118a6dc0c6736eed3110fd36e94c2772e94fb8797ba4b2a5950fcecc6fef88"
+      },
+      "match_gate": 12.0,
+      "metrics": {
+        "emitted_estimates": 7806.0,
+        "false_negatives": 45.0,
+        "false_positives": 5851.0,
+        "fragmentation": 4.0,
+        "frames": 80.0,
+        "id_switches": 487.0,
+        "matched_detections": 1955.0,
+        "mean_position_error": 1.8929476568310601,
+        "mota_like": -2.1915,
+        "position_rmse": 2.3689948848924045,
+        "truth_object_frames": 2000.0,
+        "truth_objects_per_frame": 25.0
+      },
+      "metrics_file": "data/results/phase3_1/legacy/B_documented/paper_assumption_v1/S7/S7_metrics.json",
+      "metrics_sha256": "979f8027f976769a795400ff619e03a5240f1a9e309b3276fe2b5f4a5dc67177",
+      "plot_file": "outputs/figures/phase3_1/B_documented/paper_assumption_v1/S7_trajectory.png",
+      "recovery": {
+        "details": [],
+        "opportunities": 0.0,
+        "recovery_rate": null,
+        "successes": 0.0
+      },
+      "resolved_config": {
+        "area_size": 100.0,
+        "clutter_rate": 20.0,
+        "description": "Stress case: 25 targets with high clutter (lambda=20).",
+        "detection_probability": 0.9,
+        "disappearance": [],
+        "distribution": "paper_assumption_v1",
+        "lifetimes": null,
+        "measurement_std": 1.5,
+        "motion": "parallel",
+        "name": "S7",
+        "num_targets": 25,
+        "process_accel_std": 0.08,
+        "seed": 12077,
+        "steps": 80
+      },
+      "runtime_seconds": 8.713109362000978,
+      "scenario": "S7",
+      "tracker_config": {
+        "filter": {
+          "initial_position_var": 0.25,
+          "initial_velocity_var": 1.0,
+          "measurement_noise_std": 1.5,
+          "process_accel_std": 0.1
+        },
+        "gate": {
+          "lost_gate_scale": 2.5,
+          "mahalanobis_gate": 9.21,
+          "physical_gate": 10.0
+        },
+        "kind": "dynamic_score",
+        "lifecycle": {
+          "candidate_expiry": 6,
+          "lost_expiry": 15,
+          "max_missed": 5,
+          "reappearance_reward": 0.0,
+          "report_lost": false
+        },
+        "score": {
+          "confirm_threshold": 1.0,
+          "decay": 0.95,
+          "history_lag": 4,
+          "missed_increment_mode": "documented",
+          "p_birth": 0.05,
+          "p_detect": 0.9,
+          "p_false_alarm": 0.02
+        }
+      },
+      "variant": "B_documented"
+    }
+  ],
+  "computed_missed_increment_signs": {
+    "A_missed_decay": -2.2823823856765264,
+    "B_documented": 2.2823823856765264
+  },
+  "config_file": "configs/phase3_1_score_audit.yaml",
+  "match_gate": 12.0,
+  "parity": {
+    "cases": 16,
+    "mismatches": [],
+    "ok": true
+  },
+  "phase2_config_file": "configs/phase2_scenarios.yaml",
+  "schema_version": 1,
+  "variant_labels": {
+    "A_missed_decay": "A - missed-detection decay ln((1-P_D)/(1-P_FA))",
+    "B_documented": "B - documented missed increment ln((1-P_FA)/(1-P_D))"
+  },
+  "variant_nodes": {
+    "A_missed_decay": {
+      "filter": {
+        "initial_position_var": 0.25,
+        "initial_velocity_var": 1.0,
+        "measurement_noise_std": 1.5,
+        "process_accel_std": 0.1
+      },
+      "gate": {
+        "lost_gate_scale": 2.5,
+        "mahalanobis_gate": 9.21,
+        "physical_gate": 10.0
+      },
+      "kind": "dynamic_score",
+      "lifecycle": {
+        "candidate_expiry": 6,
+        "lost_expiry": 15,
+        "max_missed": 5,
+        "reappearance_reward": 0.0,
+        "report_lost": false
+      },
+      "score": {
+        "confirm_threshold": 1.0,
+        "decay": 0.95,
+        "history_lag": 4,
+        "missed_increment_mode": "likelihood_penalty",
+        "p_birth": 0.05,
+        "p_detect": 0.9,
+        "p_false_alarm": 0.02
+      }
+    },
+    "B_documented": {
+      "filter": {
+        "initial_position_var": 0.25,
+        "initial_velocity_var": 1.0,
+        "measurement_noise_std": 1.5,
+        "process_accel_std": 0.1
+      },
+      "gate": {
+        "lost_gate_scale": 2.5,
+        "mahalanobis_gate": 9.21,
+        "physical_gate": 10.0
+      },
+      "kind": "dynamic_score",
+      "lifecycle": {
+        "candidate_expiry": 6,
+        "lost_expiry": 15,
+        "max_missed": 5,
+        "reappearance_reward": 0.0,
+        "report_lost": false
+      },
+      "score": {
+        "confirm_threshold": 1.0,
+        "decay": 0.95,
+        "history_lag": 4,
+        "missed_increment_mode": "documented",
+        "p_birth": 0.05,
+        "p_detect": 0.9,
+        "p_false_alarm": 0.02
+      }
+    }
+  }
+}

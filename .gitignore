@@ -1,0 +1,23 @@
+# Python bytecode and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/
+
+# Generated datasets and model binaries (metadata/manifests remain versioned)
+mt_tracking_repro_transfer/data/datasets/**/*.npz
+mt_tracking_repro_transfer/models/**/*.pt
+mt_tracking_repro_transfer/models/**/*.pth
+mt_tracking_repro_transfer/models/**/*.ckpt
+mt_tracking_repro_transfer/archive/**/*.npz
+mt_tracking_repro_transfer/archive/**/*.pt
+mt_tracking_repro_transfer/archive/**/*.pth
+
+# Generated plots and transient run logs
+mt_tracking_repro_transfer/outputs/**/*.png
+mt_tracking_repro_transfer/outputs/**/*.pdf
+mt_tracking_repro_transfer/**/*.log
+mt_tracking_repro_transfer/**/*.tmp

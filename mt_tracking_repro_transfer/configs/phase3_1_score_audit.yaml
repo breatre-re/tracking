@@ -1,0 +1,66 @@
+# Phase 3.1 score-direction audit configuration.
+#
+# Compares two dynamic-score variants that differ ONLY in the missed-detection
+# score increment direction. Everything else (filter, gate, other score
+# parameters, lifecycle, measurement input, evaluator, seeds, scenarios) is held
+# constant. This file is additive: no Phase 0-3 config or artifact is modified.
+#
+# Paper source: Zhang, He, Yao et al., "A robust multiple target tracking
+# framework with Transformer-based data association and dynamic trajectory
+# management in challenging environments", Aerospace Science and Technology 168
+# (2026) 111007. Section 4.3-4.4, Eq. (26)-(34), p. 8; Algorithm 2, p. 9.
+#   Eq. (26): S_l(k) = lambda_s S_l(k-1) + dS_l(k) - lambda_s^lambda_t dS_l(k-lambda_t)
+#   Eq. (27): new candidate           dS = ln(P_B / P_FA)
+#   Eq. (30): missed detection        dS = ln((1 - P_FA) / (1 - P_D))
+#   Eq. (31): successful association  dS = ln pr(x_hat(k|k)|x_hat(k-1|k-1)) - ln P_FA
+#   Section 4.4 / Algorithm 2: candidate confirm at S >= S_c, delete at S < 0;
+#                              maintained continue at S >= 0, terminate at S < 0.
+
+schema_version: 1
+
+phase2_config: configs/phase2_scenarios.yaml
+
+# Shared tracker parameters. Variants below only change missed_increment_mode.
+shared_tracker_config:
+  kind: dynamic_score
+  filter:
+    process_accel_std: 0.10
+    measurement_noise_std: 1.5
+    initial_position_var: 0.25
+    initial_velocity_var: 1.0
+  gate:
+    mahalanobis_gate: 9.21
+    physical_gate: 10.0
+    lost_gate_scale: 2.5
+  score:
+    decay: 0.95
+    history_lag: 4
+    confirm_threshold: 1.0
+    p_birth: 0.05
+    p_false_alarm: 0.02
+    p_detect: 0.90
+  lifecycle:
+    max_missed: 5
+    candidate_expiry: 6
+    lost_expiry: 15
+    reappearance_reward: 0.0
+    report_lost: false
+
+variants:
+  A_missed_decay:
+    label: "A - missed-detection decay ln((1-P_D)/(1-P_FA))"
+    missed_increment_mode: likelihood_penalty
+  B_documented:
+    label: "B - documented missed increment ln((1-P_FA)/(1-P_D))"
+    missed_increment_mode: documented
+
+# Sign computed from the configured probabilities, recorded in artifacts.
+audit:
+  p_detect: 0.90
+  p_false_alarm: 0.02
+  papers:
+    - "Zhang et al., Aerospace Science and Technology 168 (2026) 111007, Eq. (30), p. 8"
+  notes:
+    - "Eq. (30) is source-confirmed as ln((1-P_FA)/(1-P_D)); positive when P_D > P_FA."
+    - "Variant B is the paper-faithful increment; variant A is a hypothesis only."
+    - "Numeric P_B/P_FA/P_D/lambda_s/lambda_t/S_c are scene-dependent and unpublished; values here are assumptions."

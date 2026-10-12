@@ -1,0 +1,46 @@
+{
+  "distribution": "paper_assumption_v1",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 6079.0,
+    "false_negatives": 3.0,
+    "false_positives": 4082.0,
+    "fragmentation": 3.0,
+    "frames": 80.0,
+    "id_switches": 462.0,
+    "matched_detections": 1997.0,
+    "mean_position_error": 1.7465061638169395,
+    "mota_like": -1.2734999999999999,
+    "position_rmse": 2.08420974064377,
+    "truth_object_frames": 2000.0,
+    "truth_objects_per_frame": 25.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic metrics."
+  ],
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Stress case: 25 targets with high clutter (lambda=20).",
+    "detection_probability": 0.9,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S7",
+    "num_targets": 25,
+    "process_accel_std": 0.08,
+    "seed": 12077,
+    "steps": 80
+  },
+  "runtime_seconds": 0.088472143999752,
+  "scenario": "S7",
+  "tracker": {
+    "association": "gated-greedy",
+    "gate": 9.0,
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

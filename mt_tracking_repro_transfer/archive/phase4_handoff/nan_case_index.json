@@ -1,0 +1,30 @@
+[
+  {
+    "association_matches_json": "nan_cases/paper_assumption_v1_S2/ctda_matching_results.json",
+    "distribution": "paper_assumption_v1",
+    "input_hash": "d2333933b1dfbe0f893fd7d5d65bf6e78ce4c6dc610572650df9bfa0da2ccdff",
+    "manifest_rmse_is_nan": true,
+    "offline_truth_and_labels": "nan_cases/paper_assumption_v1_S2/offline_truth_and_labels.npz",
+    "output_metrics_json": "nan_cases/paper_assumption_v1_S2/tracker_output_metrics.json",
+    "recorded_total_associations": 1636.0,
+    "replay_matches_recorded_audit": true,
+    "replayed_total_associations": 1636,
+    "scenario": "S2",
+    "seed": 12022,
+    "tracker_input": "nan_cases/paper_assumption_v1_S2/tracker_input_positions.npz"
+  },
+  {
+    "association_matches_json": "nan_cases/paper_assumption_v1_S6/ctda_matching_results.json",
+    "distribution": "paper_assumption_v1",
+    "input_hash": "ad48ef297c97787db3b18468f93e982e84f1e0ea07fedb0152c3cb70801baa76",
+    "manifest_rmse_is_nan": true,
+    "offline_truth_and_labels": "nan_cases/paper_assumption_v1_S6/offline_truth_and_labels.npz",
+    "output_metrics_json": "nan_cases/paper_assumption_v1_S6/tracker_output_metrics.json",
+    "recorded_total_associations": 1489.0,
+    "replay_matches_recorded_audit": true,
+    "replayed_total_associations": 1489,
+    "scenario": "S6",
+    "seed": 12066,
+    "tracker_input": "nan_cases/paper_assumption_v1_S6/tracker_input_positions.npz"
+  }
+]

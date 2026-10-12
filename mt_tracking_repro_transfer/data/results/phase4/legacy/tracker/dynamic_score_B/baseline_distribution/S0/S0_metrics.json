@@ -1,0 +1,90 @@
+{
+  "audit": {
+    "associations_to_clutter": 0.0,
+    "associations_to_true": 79.0,
+    "candidates_born_from_clutter": 0.0,
+    "candidates_born_from_true": 1.0,
+    "total_associations": 79.0,
+    "total_measurements": 80.0,
+    "unmatched_clutter": 0.0,
+    "unmatched_true_detections": 1.0
+  },
+  "diagnostics": {
+    "births": 1.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "documented",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 1.0,
+    "deletions": 0.0,
+    "final_active_tracks": 1.0,
+    "final_confirmed": 1.0,
+    "lost_events": 0.0,
+    "max_concurrent_confirmed": 1.0,
+    "recoveries": 0.0
+  },
+  "distribution": "baseline_distribution",
+  "input_hash": "de87b72007d764fe4fdfbf43cd572323eaffa69d0f64297787cb3ef4792a17bc",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 79.0,
+    "false_negatives": 1.0,
+    "false_positives": 0.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 79.0,
+    "mean_position_error": 0.031016331995410526,
+    "mota_like": 0.9875,
+    "position_rmse": 0.1072849005978566,
+    "truth_object_frames": 80.0,
+    "truth_objects_per_frame": 1.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 0.0,
+    "description": "Single target, no measurement/process noise and no clutter.",
+    "detection_probability": 1.0,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 0.0,
+    "motion": "solo",
+    "name": "S0",
+    "num_targets": 1,
+    "process_accel_std": 0.0,
+    "seed": 2000,
+    "steps": 80
+  },
+  "runtime_seconds": 0.012364596001134487,
+  "scenario": "S0",
+  "tracker": "dynamic_score_B"
+}

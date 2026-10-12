@@ -1,0 +1,52 @@
+{
+  "distribution": "baseline_distribution",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 306.0,
+    "false_negatives": 10.0,
+    "false_positives": 156.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 1.0,
+    "matched_detections": 150.0,
+    "mean_position_error": 1.5674164488510325,
+    "mota_like": -0.043749999999999956,
+    "position_rmse": 1.8198240767665834,
+    "truth_object_frames": 160.0,
+    "truth_objects_per_frame": 2.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic metrics."
+  ],
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "description": "Two targets; one target has a short detection gap then reappears.",
+    "detection_probability": 0.9,
+    "disappearance": [
+      [
+        1,
+        30,
+        46
+      ]
+    ],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S6",
+    "num_targets": 2,
+    "process_accel_std": 0.08,
+    "seed": 2066,
+    "steps": 80
+  },
+  "runtime_seconds": 0.005294277999382757,
+  "scenario": "S6",
+  "tracker": {
+    "association": "gated-greedy",
+    "gate": 9.0,
+    "max_missed": 5,
+    "min_hits": 2
+  }
+}

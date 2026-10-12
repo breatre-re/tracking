@@ -1,0 +1,60 @@
+{
+  "audit": {
+    "associations_to_clutter": 1035.0,
+    "associations_to_true": 106.0,
+    "candidates_born_from_clutter": 506.0,
+    "candidates_born_from_true": 12.0,
+    "total_associations": 1141.0,
+    "total_measurements": 1659.0,
+    "unmatched_clutter": 506.0,
+    "unmatched_true_detections": 12.0
+  },
+  "diagnostics": {},
+  "distribution": "paper_assumption_v1",
+  "input_hash": "8a713313fc6d63bb5a6fbaa4f67971b75328aa849c3fa3f98cb791cdcb2288fe",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 3938.0,
+    "false_negatives": 5.0,
+    "false_positives": 3703.0,
+    "fragmentation": 4.0,
+    "frames": 80.0,
+    "id_switches": 53.0,
+    "matched_detections": 235.0,
+    "mean_position_error": 2.954643041134564,
+    "mota_like": -14.670833333333333,
+    "position_rmse": 3.8605701643975427,
+    "truth_object_frames": 240.0,
+    "truth_objects_per_frame": 3.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 20.0,
+    "description": "Controlled missed detections: reduced per-frame detection probability.",
+    "detection_probability": 0.45,
+    "disappearance": [],
+    "distribution": "paper_assumption_v1",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S3",
+    "num_targets": 3,
+    "process_accel_std": 0.08,
+    "seed": 12033,
+    "steps": 80
+  },
+  "runtime_seconds": 0.044618032001380925,
+  "scenario": "S3",
+  "tracker": "gated_greedy"
+}

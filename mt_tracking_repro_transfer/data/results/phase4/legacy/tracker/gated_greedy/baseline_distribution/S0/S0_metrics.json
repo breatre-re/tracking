@@ -1,0 +1,60 @@
+{
+  "audit": {
+    "associations_to_clutter": 0.0,
+    "associations_to_true": 79.0,
+    "candidates_born_from_clutter": 0.0,
+    "candidates_born_from_true": 1.0,
+    "total_associations": 79.0,
+    "total_measurements": 80.0,
+    "unmatched_clutter": 0.0,
+    "unmatched_true_detections": 1.0
+  },
+  "diagnostics": {},
+  "distribution": "baseline_distribution",
+  "input_hash": "de87b72007d764fe4fdfbf43cd572323eaffa69d0f64297787cb3ef4792a17bc",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 80.0,
+    "false_negatives": 0.0,
+    "false_positives": 0.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 80.0,
+    "mean_position_error": 0.021875714167164894,
+    "mota_like": 1.0,
+    "position_rmse": 0.07535971429392156,
+    "truth_object_frames": 80.0,
+    "truth_objects_per_frame": 1.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 0.0,
+    "description": "Single target, no measurement/process noise and no clutter.",
+    "detection_probability": 1.0,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 0.0,
+    "motion": "solo",
+    "name": "S0",
+    "num_targets": 1,
+    "process_accel_std": 0.0,
+    "seed": 2000,
+    "steps": 80
+  },
+  "runtime_seconds": 0.004687321999881533,
+  "scenario": "S0",
+  "tracker": "gated_greedy"
+}

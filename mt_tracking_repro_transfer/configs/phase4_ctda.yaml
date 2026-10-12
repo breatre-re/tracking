@@ -1,0 +1,99 @@
+# Phase 4 CTDA configuration (additive; no Phase 0-3.1 artifact is modified).
+#
+# Paper source (local PDF): Zhang, He, Yao et al., "A robust multiple target
+# tracking framework with Transformer-based data association and dynamic
+# trajectory management in challenging environments", Aerospace Science and
+# Technology 168 (2026) 111007.
+#   Section 3.1, Eq. (6)-(7): RDF (relative distance feature) matrices per axis.
+#   Section 3.2, Eq. (8)-(10): zero-padding / partition to a standard size.
+#   Section 3.3, Eq. (11)-(18): row-column cross Transformer + 3-channel cross.
+#   Section 3.3.3, Eq. (19): focal loss, alpha_t=0.75, gamma_t=2 (paper prints
+#       "lambda_t = 2"; it is the focusing parameter).
+#   Section 3.4, Eq. (20): thresholding lambda_a then Kuhn-Munkres assignment.
+#   Appendix / Table: padded input/output dim 40, 4 heads, dropout 0.3,
+#       8 epochs, batch 256, Adam, lr 1e-4 (Table 3 / Section 5.1.2).
+#
+# Reproduction assumptions (not paper-confirmed) are marked ASSUMPTION.
+
+schema_version: 1
+
+dataset:
+  train_split: data/datasets/phase1_5/paper_assumption_v1/train/train_dataset.npz
+  test_split: data/datasets/phase1_5/paper_assumption_v1/test/test_dataset.npz
+  cross_distribution_split: data/datasets/phase1_5/baseline_distribution/test/test_dataset.npz
+  pad_size: 40              # paper: padded input/output dimension 40
+  validation_fraction: 0.1  # ASSUMPTION: train-internal held-out sequences for checkpoint selection
+  seed: 20261012
+
+features:
+  # Paper uses one RDF channel per spatial axis (x, y, z). Our data is 2D, so we
+  # use x and y RDF plus a sign-free magnitude channel (ASSUMPTION) to keep the
+  # 3-channel design used by the 3-channel cross Transformer.
+  channels: [x_rdf, y_rdf, range_rdf]
+  x_bias: 0.001             # ASSUMPTION: small constant avoiding division by zero
+  pad_value: -1.0           # ASSUMPTION: padded cells filled with the "far" RDF extreme
+
+model:
+  variant: row_column_3ch   # standard_transformer | row_column | row_column_3ch
+  d_model: 40               # paper: padded input/output dimension 40
+  n_heads: 4
+  dropout: 0.3
+  enc_layers: 1             # ASSUMPTION: layer counts are not printed
+  dec_layers: 1             # ASSUMPTION
+  ffn_dim: 40               # ASSUMPTION (2x would be 80; reduced for tractable CPU-data-bound training)
+  mixing: elementwise       # Eq. (14) element-wise mixing (paper: efficiency choice)
+
+training:
+  epochs: 8
+  batch_size: 256
+  optimizer: adam
+  lr: 0.0001
+  weight_decay: 0.0
+  loss: focal               # Eq. (19)
+  focal_alpha: 0.75
+  focal_gamma: 2.0
+  device: cuda
+  seed: 20261012
+  num_workers: 0
+  deterministic: true
+  log_every_steps: 100
+
+inference:
+  association_threshold: 0.1   # lambda_a for the 2D MTT benchmark (Section 5.2)
+  one_to_one: true             # Kuhn-Munkres / Hungarian (Algorithm 1)
+  apply_physical_gate: false   # ASSUMPTION: paper does not gate CTDA output by distance
+
+# Score / lifecycle stay at the Phase 3 values; B (documented) is the
+# paper-faithful missed increment (source-confirmed Eq. (30), Phase 3.1).
+score_tracker:
+  filter:
+    process_accel_std: 0.10
+    measurement_noise_std: 1.5
+    initial_position_var: 0.25
+    initial_velocity_var: 1.0
+  gate:
+    mahalanobis_gate: 9.21
+    physical_gate: 10.0
+    lost_gate_scale: 2.5
+  score:
+    decay: 0.95
+    history_lag: 4
+    confirm_threshold: 1.0
+    p_birth: 0.05
+    p_false_alarm: 0.02
+    p_detect: 0.90
+    missed_increment_mode: documented
+  lifecycle:
+    max_missed: 5
+    candidate_expiry: 6
+    lost_expiry: 15
+    reappearance_reward: 0.0
+    report_lost: false
+
+phase2_config: configs/phase2_scenarios.yaml
+
+outputs:
+  models_root: models/checkpoints/phase4/runs
+  results_root: data/results/phase4/runs
+  plots_root: outputs/figures/phase4/runs
+  manifest: data/manifests/phase4_runs_manifest.json

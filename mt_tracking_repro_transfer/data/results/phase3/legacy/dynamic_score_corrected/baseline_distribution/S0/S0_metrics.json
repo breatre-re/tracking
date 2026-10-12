@@ -1,0 +1,108 @@
+{
+  "diagnostics": {
+    "births": 1.0,
+    "config": {
+      "candidate_expiry": 6,
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "lost_expiry": 15,
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "max_missed": 5,
+      "measurement_noise_std": 1.5,
+      "missed_increment_mode": "likelihood_penalty",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02,
+      "physical_gate": 10.0,
+      "process_accel_std": 0.1,
+      "reappearance_reward": 0.0,
+      "report_lost": false,
+      "score_confirm": 1.0,
+      "score_decay": 0.95,
+      "score_history_lag": 4
+    },
+    "confirmations": 1.0,
+    "deletions": 0.0,
+    "final_active_tracks": 1.0,
+    "final_confirmed": 1.0,
+    "lost_events": 0.0,
+    "max_concurrent_confirmed": 1.0,
+    "recoveries": 0.0
+  },
+  "distribution": "baseline_distribution",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 79.0,
+    "false_negatives": 1.0,
+    "false_positives": 0.0,
+    "fragmentation": 0.0,
+    "frames": 80.0,
+    "id_switches": 0.0,
+    "matched_detections": 79.0,
+    "mean_position_error": 0.031016331995410526,
+    "mota_like": 0.9875,
+    "position_rmse": 0.1072849005978566,
+    "truth_object_frames": 80.0,
+    "truth_objects_per_frame": 1.0
+  },
+  "notes": [
+    "Tracker input contains positions only; source labels are used solely by the evaluator.",
+    "runtime_seconds is wall-clock and not part of the deterministic fields."
+  ],
+  "recovery": {
+    "details": [],
+    "opportunities": 0.0,
+    "recovery_rate": null,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 0.0,
+    "description": "Single target, no measurement/process noise and no clutter.",
+    "detection_probability": 1.0,
+    "disappearance": [],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 0.0,
+    "motion": "solo",
+    "name": "S0",
+    "num_targets": 1,
+    "process_accel_std": 0.0,
+    "seed": 2000,
+    "steps": 80
+  },
+  "runtime_seconds": 0.011313991000861279,
+  "scenario": "S0",
+  "tracker": "dynamic_score_corrected",
+  "tracker_config": {
+    "filter": {
+      "initial_position_var": 0.25,
+      "initial_velocity_var": 1.0,
+      "measurement_noise_std": 1.5,
+      "process_accel_std": 0.1
+    },
+    "gate": {
+      "lost_gate_scale": 2.5,
+      "mahalanobis_gate": 9.21,
+      "physical_gate": 10.0
+    },
+    "kind": "dynamic_score",
+    "lifecycle": {
+      "candidate_expiry": 6,
+      "lost_expiry": 15,
+      "max_missed": 5,
+      "reappearance_reward": 0.0,
+      "report_lost": false
+    },
+    "score": {
+      "confirm_threshold": 1.0,
+      "decay": 0.95,
+      "history_lag": 4,
+      "missed_increment_mode": "likelihood_penalty",
+      "p_birth": 0.05,
+      "p_detect": 0.9,
+      "p_false_alarm": 0.02
+    }
+  }
+}

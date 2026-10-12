@@ -1,0 +1,76 @@
+{
+  "audit": {
+    "associations_to_clutter": 8.0,
+    "associations_to_true": 127.0,
+    "candidates_born_from_clutter": 123.0,
+    "candidates_born_from_true": 4.0,
+    "total_associations": 135.0,
+    "total_measurements": 262.0,
+    "unmatched_clutter": 123.0,
+    "unmatched_true_detections": 4.0
+  },
+  "diagnostics": {},
+  "distribution": "baseline_distribution",
+  "input_hash": "d46813b27a0d78586aa5021143bec60e3f2cdb070fe42808adfb3c7a32a5790c",
+  "match_gate": 12.0,
+  "metrics": {
+    "emitted_estimates": 306.0,
+    "false_negatives": 10.0,
+    "false_positives": 156.0,
+    "fragmentation": 1.0,
+    "frames": 80.0,
+    "id_switches": 1.0,
+    "matched_detections": 150.0,
+    "mean_position_error": 1.5674164488510325,
+    "mota_like": -0.043749999999999956,
+    "position_rmse": 1.8198240767665834,
+    "truth_object_frames": 160.0,
+    "truth_objects_per_frame": 2.0
+  },
+  "notes": [
+    "Tracker input contains positions only; ground-truth ids never reach the tracker.",
+    "Phase 2 scenarios/evaluator and the Phase 3 B score direction are unchanged.",
+    "runtime_seconds is wall-clock and not part of deterministic equality."
+  ],
+  "recovery": {
+    "details": [
+      {
+        "eligible": true,
+        "end": 46,
+        "post_track_id": 73,
+        "pre_track_id": 3,
+        "recovered": false,
+        "start": 30,
+        "target": 1
+      }
+    ],
+    "opportunities": 1.0,
+    "recovery_rate": 0.0,
+    "successes": 0.0
+  },
+  "resolved_config": {
+    "area_size": 100.0,
+    "clutter_rate": 1.5,
+    "description": "Two targets; one target has a short detection gap then reappears.",
+    "detection_probability": 0.9,
+    "disappearance": [
+      [
+        1,
+        30,
+        46
+      ]
+    ],
+    "distribution": "baseline_distribution",
+    "lifetimes": null,
+    "measurement_std": 1.5,
+    "motion": "parallel",
+    "name": "S6",
+    "num_targets": 2,
+    "process_accel_std": 0.08,
+    "seed": 2066,
+    "steps": 80
+  },
+  "runtime_seconds": 0.006060015999537427,
+  "scenario": "S6",
+  "tracker": "gated_greedy"
+}

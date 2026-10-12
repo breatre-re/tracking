@@ -1,0 +1,8 @@
+python: 3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]
+numpy: 1.26.4
+torch: 2.4.1
+torch compiled cuda: 12.1
+cuda available: True
+cuda device count: 8
+gpu: NVIDIA GeForce RTX 4090
+gpu tensor test: PASS (2048, 2048) cuda:0
