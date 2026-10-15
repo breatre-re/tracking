@@ -1,0 +1,6 @@
+{
+  "validation_blocks": 64,
+  "positive_samples": 522,
+  "raw_abs_rdf_product_auc": 0.9999945888119759,
+  "model_output_auc": 0.502779089805559
+}

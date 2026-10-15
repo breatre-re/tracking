@@ -1,0 +1,7 @@
+experiment,total_epochs,split,pairs,accuracy_mean,positive_precision,positive_recall,positive_f1,focal_loss_valid_elements,note
+ctda_repaired_run,8,test,20000,0.6402110431067367,0.45557997063916283,0.9336525109928258,0.6123573831870273,0.0015505641682643373,"Same corrected model, data, batch=256, threshold=.2; scores are fractions"
+ctda_extended_20,20,test,20000,0.9139184374546745,0.7826926613941512,0.984841471881509,0.8722074195531871,0.0004389736156045291,"Same corrected model, data, batch=256, threshold=.2; scores are fractions"
+ctda_extended_30,30,test,20000,0.9603533475612914,0.8872711682743837,0.9978207205122271,0.9393044038687599,0.0001495223605088312,"Same corrected model, data, batch=256, threshold=.2; scores are fractions"
+ctda_extended_40,40,test,20000,0.9720099683032954,0.917804819682883,0.9985632183908046,0.9564823837475119,0.00011114782935110247,"Same corrected model, data, batch=256, threshold=.2; scores are fractions"
+distance_baseline,,test,20000,0.9990238036129627,0.9970626694613772,0.9999662500964283,0.9985123489480525,,Fixed 10000 m distance gate
+paper_reference,8,reported,,0.9833,,,,,Author data/settings not fully aligned; reported Loss .0067 has unknown reduction

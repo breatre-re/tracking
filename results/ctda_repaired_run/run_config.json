@@ -1,0 +1,41 @@
+{
+  "data": "data/ctda_3d_v1",
+  "variant": "range_only",
+  "model": {
+    "dimension": 40,
+    "heads": 4,
+    "hidden": 160,
+    "dropout": 0.3,
+    "row_column_layers": 2,
+    "channel_residuals": true
+  },
+  "seed": 20261013,
+  "epochs": 8,
+  "batch_size": 256,
+  "optimizer": "Adam",
+  "learning_rate": 0.0001,
+  "focal_alpha": 0.75,
+  "focal_gamma": 2,
+  "association_threshold": 0.2,
+  "training_loss_reduction": "mean of valid elements, padding excluded",
+  "loss_mode": "masked_focal",
+  "cache_root": "results/ctda_first_run/cache",
+  "attention_padding_mask": false,
+  "device": "cuda:4",
+  "parameter_count": 847222,
+  "torch_version": "2.4.1",
+  "cuda_build": "12.1",
+  "mixed_precision": false,
+  "assumptions": [
+    "d_model=40, FFN=160, ReLU; independent weights across branches and channels",
+    "2 encoder/decoder layers per row-column branch, 1 per channel branch",
+    "Eq12/13 printed cross Q/K/V; Eq17 residual interpretation recorded by channel_residuals",
+    "padding treatment recorded by loss_mode; paper reduction was not reported",
+    "probability-sum assignment with dummy unmatched choices, threshold=.2",
+    "training uses 1620 fit scenes; validation 180 from the 1800 paper training pool",
+    "one seed for first complete run; simulated data assumptions remain"
+  ],
+  "model_source_sha256": "57069313be18fc6e1b99f71ba08fa2117d2a6def4779ee5104b833d976c350b2",
+  "trainer_source_sha256": "cd3054cab7dbf3ad8429b2cdcba5c9987e9efb724ed1da0e73f5b1327a7c08d3",
+  "gpu_name": "NVIDIA GeForce RTX 4090"
+}

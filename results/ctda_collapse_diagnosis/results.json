@@ -1,0 +1,104 @@
+{
+  "A_legacy": {
+    "objective": "legacy",
+    "channel_residuals": false,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.6785906209156721,
+      "positive_precision": 0.05,
+      "positive_recall": 0.004377006127808579,
+      "positive_f1": 0.008049369466058493,
+      "true_row_accuracy": 0.004377006127808579,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.1514858552560467,
+      "negative_probability_mean": 0.1435054465545484
+    },
+    "last_100_step_objective_mean": 0.006241842056624591,
+    "elapsed_seconds": 33.55679848100044
+  },
+  "B_masked_focal": {
+    "objective": "masked_focal",
+    "channel_residuals": false,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.6879591539476966,
+      "positive_precision": 0.022222222222222223,
+      "positive_recall": 0.0005836008170411438,
+      "positive_f1": 0.0011373329542223485,
+      "true_row_accuracy": 0.0005836008170411438,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.1686454522590579,
+      "negative_probability_mean": 0.168271689085597
+    },
+    "last_100_step_objective_mean": 0.010854599215090275,
+    "elapsed_seconds": 32.200515567001275
+  },
+  "C_balanced": {
+    "objective": "balanced",
+    "channel_residuals": false,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.07952645745526865,
+      "positive_precision": 0.015136876006441223,
+      "positive_recall": 0.041143857601400644,
+      "positive_f1": 0.02213153351122273,
+      "true_row_accuracy": 0.041143857601400644,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.5645440099779914,
+      "negative_probability_mean": 0.5652173661488357
+    },
+    "last_100_step_objective_mean": 0.25735327780246736,
+    "elapsed_seconds": 34.759990475999075
+  },
+  "D_balanced_structure": {
+    "objective": "balanced_structured",
+    "channel_residuals": false,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.6715588257731275,
+      "positive_precision": 0.02586206896551724,
+      "positive_recall": 0.0026262036766851473,
+      "positive_f1": 0.004768211920529801,
+      "true_row_accuracy": 0.0026262036766851473,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.16441980784806212,
+      "negative_probability_mean": 0.1635082062778058
+    },
+    "last_100_step_objective_mean": 1.7682135808467865,
+    "elapsed_seconds": 39.29887853899709
+  },
+  "E_residual_masked": {
+    "objective": "masked_focal",
+    "channel_residuals": true,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.4201069590681102,
+      "positive_precision": 0.19934200687901898,
+      "positive_recall": 0.3889699445579224,
+      "positive_f1": 0.26359501680838443,
+      "true_row_accuracy": 0.3889699445579224,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.25508947292604217,
+      "negative_probability_mean": 0.1628668603680531
+    },
+    "last_100_step_objective_mean": 0.009647793639451265,
+    "elapsed_seconds": 31.882243052001286
+  },
+  "F_residual_balanced_structure": {
+    "objective": "balanced_structured",
+    "channel_residuals": true,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.40698938920129324,
+      "positive_precision": 0.19797171832595342,
+      "positive_recall": 0.4044353662095127,
+      "positive_f1": 0.26582278481012656,
+      "true_row_accuracy": 0.4044353662095127,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.357965666051766,
+      "negative_probability_mean": 0.15090804766168664
+    },
+    "last_100_step_objective_mean": 1.4845715713500978,
+    "elapsed_seconds": 37.801943888000096
+  }
+}

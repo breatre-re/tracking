@@ -1,0 +1,62 @@
+{
+  "workflow_completed": true,
+  "epochs_completed": 40,
+  "training_and_validation_seconds": 1565.4646142660058,
+  "total_seconds": 1572.4075159080094,
+  "initial_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.0776113225844281,
+    "positive_precision": 0.013955168545734548,
+    "positive_recall": 0.038588928026917615,
+    "positive_f1": 0.02049764025803569,
+    "true_row_accuracy": 0.038588928026917615,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 0.03572283000686022,
+    "focal_loss_valid_elements": 0.03634858301233417,
+    "accuracy_row_column_weighted": 0.0738733225510338,
+    "association_threshold": 0.2
+  },
+  "final_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.9955025656863847,
+    "positive_precision": 0.9877434432614906,
+    "positive_recall": 0.9998948530571473,
+    "positive_f1": 0.9937820043891734,
+    "true_row_accuracy": 0.9998948530571473,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 1.1477478404186588e-05,
+    "focal_loss_valid_elements": 2.4147267378273786e-05,
+    "accuracy_row_column_weighted": 0.9958561000131136,
+    "association_threshold": 0.2
+  },
+  "test": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.9952875110883324,
+    "positive_precision": 0.9869412929262164,
+    "positive_recall": 0.999884286044897,
+    "positive_f1": 0.9933706315144083,
+    "true_row_accuracy": 0.999884286044897,
+    "true_positive_edges": 207408,
+    "focal_loss_including_padding": 1.3409166994621446e-05,
+    "focal_loss_valid_elements": 2.7483585729524342e-05,
+    "accuracy_row_column_weighted": 0.9956230350871346,
+    "association_threshold": 0.2
+  },
+  "test_epoch8": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.9810274042184927,
+    "positive_precision": 0.9505269092725948,
+    "positive_recall": 0.9997975005785698,
+    "positive_f1": 0.9745398491894344,
+    "true_row_accuracy": 0.9997975005785698,
+    "true_positive_edges": 207408,
+    "focal_loss_including_padding": 2.708548617407099e-05,
+    "focal_loss_valid_elements": 5.5489261953276734e-05,
+    "accuracy_row_column_weighted": 0.9828428688640364,
+    "association_threshold": 0.2
+  },
+  "parameter_count": 824449,
+  "checkpoint": "final.pt",
+  "test_selection": "Fixed8 and40; no tuning on test",
+  "peak_cuda_allocated_mib": 1767.65087890625
+}

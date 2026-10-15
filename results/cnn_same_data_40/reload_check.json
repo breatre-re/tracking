@@ -1,0 +1,29 @@
+{
+  "raw_pair_cpu_reload": [
+    {
+      "scene_id": 22,
+      "frame": 0,
+      "maximum_probability_difference": 1.590792089700699e-05,
+      "truth_identical": true,
+      "matching_identical": true
+    },
+    {
+      "scene_id": 22,
+      "frame": 1,
+      "maximum_probability_difference": 9.479932487010956e-06,
+      "truth_identical": true,
+      "matching_identical": true
+    },
+    {
+      "scene_id": 22,
+      "frame": 2,
+      "maximum_probability_difference": 1.379847526550293e-05,
+      "truth_identical": true,
+      "matching_identical": true
+    }
+  ],
+  "adam_final_step": 34720,
+  "source_snapshot_hashes_match": true,
+  "cpu_gpu_tolerance": 0.001,
+  "note": "Same float32 tensor dtype; CUDA convolutions use framework-default cuDNN TF32 permission"
+}

@@ -1,0 +1,58 @@
+{
+  "workflow_completed": true,
+  "epochs_completed": 8,
+  "initial_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.11414944211760567,
+    "positive_precision": 0.059090822670494515,
+    "positive_recall": 0.1633983491929972,
+    "positive_f1": 0.08679382278198218,
+    "true_row_accuracy": 0.1633983491929972,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 0.1257716468743735,
+    "focal_loss_valid_elements": 0.13493700363977726,
+    "accuracy_row_column_weighted": 0.11301306989552826,
+    "association_threshold": 0.2
+  },
+  "final_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.6368227232574258,
+    "positive_precision": 0.4548028415525584,
+    "positive_recall": 0.928973240103044,
+    "positive_f1": 0.6106474521797729,
+    "true_row_accuracy": 0.928973240103044,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 0.07164159216494587,
+    "focal_loss_valid_elements": 0.0015844233655573424,
+    "accuracy_row_column_weighted": 0.6273375005464004,
+    "association_threshold": 0.2
+  },
+  "test": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.6402110431067367,
+    "positive_precision": 0.45557997063916283,
+    "positive_recall": 0.9336525109928258,
+    "positive_f1": 0.6123573831870273,
+    "true_row_accuracy": 0.9336525109928258,
+    "true_positive_edges": 207408,
+    "focal_loss_including_padding": 0.07344091282351192,
+    "focal_loss_valid_elements": 0.0015505641682643373,
+    "accuracy_row_column_weighted": 0.6306923952218397,
+    "association_threshold": 0.2
+  },
+  "test_distance_baseline": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.9990238036129627,
+    "positive_precision": 0.9970626694613772,
+    "positive_recall": 0.9999662500964283,
+    "positive_f1": 0.9985123489480525,
+    "true_row_accuracy": 0.9999662500964283,
+    "true_positive_edges": 207408
+  },
+  "training_and_evaluation_seconds": 629.2811160269994,
+  "checkpoint": "final.pt",
+  "paper_accuracy_reference": 0.9833,
+  "accuracy_gap_percentage_points": -34.30889568932633,
+  "caveat": "First complete run with explicit assumptions; not proof of strict reproduction.",
+  "peak_cuda_allocated_mib": 2021.66357421875
+}

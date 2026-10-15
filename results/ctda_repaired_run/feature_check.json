@@ -1,0 +1,6 @@
+{
+  "validation_blocks": 64,
+  "model_probability_auc": 0.9971380374792225,
+  "positive_probability_mean": 0.6855820417404175,
+  "negative_probability_mean": 0.1054464727640152
+}

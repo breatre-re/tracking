@@ -1,0 +1,9 @@
+{
+  "adjacent_label_reconstruction": true,
+  "independent_row_column_permutation_check": true,
+  "target_translation_preserves_displacement": true,
+  "cartesian_noise_draws_preserved": true,
+  "fixed_comparable_pair_counts": true,
+  "test_scene_ids_excluded": true,
+  "all_passed": true
+}

@@ -1,0 +1,28 @@
+{
+  "cpu_reload_raw_pair_checks": [
+    {
+      "scene_id": 22,
+      "frame": 0,
+      "maximum_probability_difference": 2.384185791015625e-07,
+      "truth_identical": true,
+      "matching_identical": true
+    },
+    {
+      "scene_id": 22,
+      "frame": 1,
+      "maximum_probability_difference": 5.960464477539063e-08,
+      "truth_identical": true,
+      "matching_identical": true
+    },
+    {
+      "scene_id": 22,
+      "frame": 2,
+      "maximum_probability_difference": 1.1920928955078125e-07,
+      "truth_identical": true,
+      "matching_identical": true
+    }
+  ],
+  "adam_final_step": 26040,
+  "source_snapshot_hashes_match": true,
+  "epochs_completed": 30
+}

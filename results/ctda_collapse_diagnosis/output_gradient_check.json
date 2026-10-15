@@ -1,0 +1,17 @@
+{
+  "positive": {
+    "elements": 522,
+    "output_gradient_absolute_fraction": 0.6689130258739231,
+    "loss_fraction": 0.8796371992835081
+  },
+  "valid_negative": {
+    "elements": 51688,
+    "output_gradient_absolute_fraction": 0.18956589067580099,
+    "loss_fraction": 0.06919218346512815
+  },
+  "padding": {
+    "elements": 50190,
+    "output_gradient_absolute_fraction": 0.1415210834502759,
+    "loss_fraction": 0.05117067171736782
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "device": "cuda:4",
+  "gpu_name": "NVIDIA GeForce RTX 4090",
+  "batch_size": 256,
+  "input_shape": [
+    256,
+    3,
+    40,
+    40
+  ],
+  "dtype": "torch.float32",
+  "warmup_batches": 10,
+  "timed_batches": 30,
+  "scope": "Model forward only; cached GPU input; no RDF/loss/matching/transfers",
+  "matmul_allow_tf32": false,
+  "cudnn_allow_tf32": true,
+  "models": {
+    "CTDA": {
+      "median_batch_ms": 13.267413502035197,
+      "median_ms_per_block": 0.05182583399232499,
+      "blocks_per_second": 19295.396194648645,
+      "mean_batch_ms": 13.32339466753183,
+      "peak_cuda_allocated_mib": 49.91943359375
+    },
+    "CNN": {
+      "median_batch_ms": 12.275408000277821,
+      "median_ms_per_block": 0.04795081250108524,
+      "blocks_per_second": 20854.703973522195,
+      "mean_batch_ms": 12.283164567876762,
+      "peak_cuda_allocated_mib": 618.896484375
+    }
+  }
+}

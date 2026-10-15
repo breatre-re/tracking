@@ -1,0 +1,16 @@
+{
+  "positive_elements": 1731822,
+  "all_elements": 355412800,
+  "valid_elements": 171329244,
+  "padding_fraction": 0.5179429553465716,
+  "positive_fraction_with_padding": 0.004872705766365196,
+  "positive_fraction_valid_only": 0.010108151764213704,
+  "constant_predictor_with_padding": {
+    "optimal_constant_probability": 0.1723731383162401,
+    "constant_focal_loss": 0.005799411927739689
+  },
+  "constant_predictor_valid_only": {
+    "optimal_constant_probability": 0.21452197299217116,
+    "constant_focal_loss": 0.009949996274044502
+  }
+}

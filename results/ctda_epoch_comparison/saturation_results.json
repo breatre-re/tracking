@@ -1,0 +1,21 @@
+{
+  "epoch_count_fixed_before_training": 40,
+  "test_used_for_saturation_decision": false,
+  "validation_metric_changes": {
+    "accuracy_mean": {
+      "gain_30_to_40_pp": 1.189661171104217,
+      "gain_35_to_40_pp": 0.4761307420560801,
+      "range_36_to_40_pp": 0.462709082485091
+    },
+    "positive_f1": {
+      "gain_30_to_40_pp": 1.7773405473964887,
+      "gain_35_to_40_pp": 0.7113219517593805,
+      "range_36_to_40_pp": 0.6869640605433935
+    }
+  },
+  "association_metrics_near_plateau": false,
+  "criterion": "Both |gain35to40|<=0.2 pp and range36to40<=0.3 pp; diagnostic heuristic, not paper criterion",
+  "valid_loss_relative_drop_30_to_40": 0.25835006767663216,
+  "valid_loss_relative_drop_35_to_40": 0.10160378551570926,
+  "train_minus_validation_accuracy_pp": -0.0014198647799723574
+}

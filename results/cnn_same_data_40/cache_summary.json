@@ -1,0 +1,35 @@
+{
+  "fit": {
+    "manifest_sha256": "b2bb2f01d1a99e02cd063b4731c83fa79ea992449bcfe687a67a4cbe04d05338",
+    "variant": "range_only",
+    "scenes": 1620,
+    "pair_stride": 1,
+    "pairs": 162000,
+    "blocks": 222133,
+    "positive_labels": 1731822,
+    "input_dtype": "float32",
+    "padding_label": 0
+  },
+  "validation": {
+    "manifest_sha256": "b2bb2f01d1a99e02cd063b4731c83fa79ea992449bcfe687a67a4cbe04d05338",
+    "variant": "range_only",
+    "scenes": 180,
+    "pair_stride": 10,
+    "pairs": 1800,
+    "blocks": 2494,
+    "positive_labels": 19021,
+    "input_dtype": "float32",
+    "padding_label": 0
+  },
+  "test": {
+    "manifest_sha256": "b2bb2f01d1a99e02cd063b4731c83fa79ea992449bcfe687a67a4cbe04d05338",
+    "variant": "range_only",
+    "scenes": 200,
+    "pair_stride": 1,
+    "pairs": 20000,
+    "blocks": 26477,
+    "positive_labels": 207408,
+    "input_dtype": "float32",
+    "padding_label": 0
+  }
+}

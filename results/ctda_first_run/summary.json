@@ -1,0 +1,58 @@
+{
+  "workflow_completed": true,
+  "epochs_completed": 8,
+  "initial_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.07369955332008406,
+    "positive_precision": 0.009820967957659018,
+    "positive_recall": 0.027022764313127594,
+    "positive_f1": 0.014406233358558255,
+    "true_row_accuracy": 0.027022764313127594,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 0.1244234698432488,
+    "focal_loss_valid_elements": 0.12934360298339415,
+    "accuracy_row_column_weighted": 0.06942343838790051,
+    "association_threshold": 0.2
+  },
+  "final_validation": {
+    "pairs_evaluated": 1800,
+    "accuracy_mean": 0.6909074067745525,
+    "positive_precision": 0.0,
+    "positive_recall": 0.0,
+    "positive_f1": 0.0,
+    "true_row_accuracy": 0.0,
+    "true_positive_edges": 19021,
+    "focal_loss_including_padding": 0.005820239448700318,
+    "focal_loss_valid_elements": 0.011529049891468364,
+    "accuracy_row_column_weighted": 0.6674214276347423,
+    "association_threshold": 0.2
+  },
+  "test": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.6943265568402712,
+    "positive_precision": 0.0,
+    "positive_recall": 0.0,
+    "positive_f1": 0.0,
+    "true_row_accuracy": 0.0,
+    "true_positive_edges": 207408,
+    "focal_loss_including_padding": 0.005948116053094874,
+    "focal_loss_valid_elements": 0.011514110615878375,
+    "accuracy_row_column_weighted": 0.670842081708635,
+    "association_threshold": 0.2
+  },
+  "test_distance_baseline": {
+    "pairs_evaluated": 20000,
+    "accuracy_mean": 0.9990238036129627,
+    "positive_precision": 0.9970626694613772,
+    "positive_recall": 0.9999662500964283,
+    "positive_f1": 0.9985123489480525,
+    "true_row_accuracy": 0.9999662500964283,
+    "true_positive_edges": 207408
+  },
+  "training_and_evaluation_seconds": 588.6169882719987,
+  "checkpoint": "final.pt",
+  "paper_accuracy_reference": 0.9833,
+  "accuracy_gap_percentage_points": -28.897344315972873,
+  "caveat": "First complete run with explicit assumptions; not proof of strict reproduction.",
+  "peak_cuda_allocated_mib": 2011.86865234375
+}

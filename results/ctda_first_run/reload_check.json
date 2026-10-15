@@ -1,0 +1,12 @@
+{
+  "checkpoint_epoch": 8,
+  "raw_test_pairs_reloaded": 3,
+  "cpu_gpu_max_probability_difference": 8.940696716308594e-08,
+  "predictions_match_saved_test_outputs": true,
+  "validation_blocks_checked": 2494,
+  "validation_valid_edges_above_threshold": 0,
+  "validation_max_probability": 0.1681392937898636,
+  "positive_probability_mean": 0.14461387978023263,
+  "negative_probability_mean": 0.1446544667973878,
+  "all_checks_passed": true
+}

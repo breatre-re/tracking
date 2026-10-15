@@ -1,0 +1,8 @@
+{
+  "epoch": 3,
+  "validation_blocks": 64,
+  "positive_probability_mean": 0.362089067697525,
+  "negative_valid_probability_mean": 0.3627338707447052,
+  "padding_probability_mean": 0.3618597388267517,
+  "logits_vary_across_elements": true
+}

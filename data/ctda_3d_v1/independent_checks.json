@@ -1,0 +1,9 @@
+{
+  "deterministic_scenes_recomputed": 3,
+  "eq1_finite_difference_rate_max_error": 2.2942536759273935e-09,
+  "six_block_label_restore": true,
+  "valid_area_count": 3483,
+  "example_blocks_checked": 128,
+  "scene_file_sha256_checked": 2100,
+  "all_passed": true
+}

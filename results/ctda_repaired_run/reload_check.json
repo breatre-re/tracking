@@ -1,0 +1,6 @@
+{
+  "checkpoint_epoch": 8,
+  "raw_test_pairs_recomputed": 3,
+  "max_probability_difference_cpu_gpu": 2.384185791015625e-07,
+  "reloaded_predictions_match": true
+}

@@ -1,0 +1,207 @@
+{
+  "status": "formula_reading_audit_only",
+  "checks_passed": 15,
+  "checks_total": 15,
+  "checks": [
+    {
+      "name": "eq6_sigmoid_tanh_equivalence",
+      "passed": true,
+      "evidence": {
+        "maximum_absolute_error": 1.5916087892087205e-16
+      }
+    },
+    {
+      "name": "eq6_exact_zero_distance_maps_to_zero",
+      "passed": true,
+      "evidence": {
+        "zero_distance_feature": 0.0,
+        "interpretation": "Confirmed edge case, not a correction."
+      }
+    },
+    {
+      "name": "eq6_nonzero_distance_magnitude_decreases",
+      "passed": true,
+      "evidence": {
+        "positive_distances": [
+          1,
+          1000,
+          1000000
+        ],
+        "features": [
+          1.0,
+          0.461724235560008,
+          0.0004999994583339625
+        ]
+      }
+    },
+    {
+      "name": "eq19_focal_loss_equivalence",
+      "passed": true,
+      "evidence": {
+        "maximum_absolute_error": 2.220446049250313e-16,
+        "alpha_positive": 0.75,
+        "gamma": 2
+      }
+    },
+    {
+      "name": "eq35_zero_prediction_counterexample",
+      "passed": true,
+      "evidence": {
+        "paper_accuracy": 0.0,
+        "element_accuracy": 0.975
+      }
+    },
+    {
+      "name": "eq35_one_missed_edge",
+      "passed": true,
+      "evidence": {
+        "paper_accuracy": 0.975,
+        "element_accuracy": 0.999375
+      }
+    },
+    {
+      "name": "eq35_all_zero_truth_degeneracy",
+      "passed": true,
+      "evidence": {
+        "paper_accuracy": 1.0,
+        "warning": "Does not demonstrate recovery of any true association."
+      }
+    },
+    {
+      "name": "eq26_finite_window_equivalence",
+      "passed": true,
+      "evidence": {
+        "maximum_absolute_error": 2.220446049250313e-16,
+        "assumption": "initial score and pre-birth increments are zero"
+      }
+    },
+    {
+      "name": "eq30_printed_miss_increment_is_positive",
+      "passed": true,
+      "evidence": {
+        "P_D": 0.9,
+        "P_FA": 0.1,
+        "printed_increment": 2.1972245773362196,
+        "candidate_llr_reversal": -2.1972245773362196,
+        "status": "author confirmation needed"
+      }
+    },
+    {
+      "name": "eq34_poisson_nonempty_probability_not_mean",
+      "passed": true,
+      "evidence": {
+        "sum_probability_i_ge_1": 0.9999999979388468,
+        "closed_form": 0.9999999979388464,
+        "mean_count": 20.0
+      }
+    },
+    {
+      "name": "eq38_printed_stationary_state_counterexample",
+      "passed": true,
+      "evidence": {
+        "initial": [
+          100.0,
+          0.0,
+          250.0,
+          0.0,
+          0.0
+        ],
+        "printed_next": [
+          100.0,
+          100.0,
+          100.0,
+          100.0,
+          0.0
+        ],
+        "reference_model_next": [
+          100.0,
+          0.0,
+          250.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "eq38_reference_zero_turn_limit",
+      "passed": true,
+      "evidence": {
+        "zero_turn_next": [
+          110.0,
+          10.0,
+          245.0,
+          -5.0,
+          0.0
+        ],
+        "small_turn_next": [
+          110.0000000025,
+          10.000000005,
+          245.000000005,
+          -4.99999999,
+          0.0
+        ],
+        "dt_seconds": 1
+      }
+    },
+    {
+      "name": "table9_order_one_ospa_additivity_with_rounding",
+      "passed": true,
+      "evidence": {
+        "absolute_errors": {
+          "PHD": 8.881784197001252e-16,
+          "CPHD": 8.881784197001252e-16,
+          "GLMB": 0.0009999999999985576,
+          "CTDA_framework": 0.0
+        },
+        "three_entry_rounding_bound": 0.0015,
+        "note": "GLMB has a 0.001 discrepancy, compatible with three-decimal rounding."
+      }
+    },
+    {
+      "name": "thresholded_partial_assignment_counterexample",
+      "passed": true,
+      "evidence": {
+        "probabilities": [
+          [
+            0.3,
+            0.25
+          ],
+          [
+            0.19,
+            0.0
+          ]
+        ],
+        "threshold": 0.2,
+        "forced_then_filtered": [
+          [
+            0,
+            1
+          ]
+        ],
+        "forced_retained_value": 0.25,
+        "partial_matching": [
+          [
+            0,
+            0
+          ]
+        ],
+        "partial_value": 0.3
+      }
+    },
+    {
+      "name": "algorithm1_missing_mask_counterexample",
+      "passed": true,
+      "evidence": {
+        "probability": 0.0,
+        "threshold": 0.2,
+        "literal_A": [
+          [
+            1
+          ]
+        ],
+        "status": "Printed condition can select a forbidden edge."
+      }
+    }
+  ],
+  "caveat": "Confirmed numerical issues do not establish the authors' implementation or trained performance."
+}

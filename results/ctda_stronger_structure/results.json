@@ -1,0 +1,19 @@
+{
+  "F_residual_balanced_structure": {
+    "objective": "balanced_structured",
+    "channel_residuals": true,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.8278914485601995,
+      "positive_precision": 0.6910499139414802,
+      "positive_recall": 0.7029471841260577,
+      "positive_f1": 0.6969477795457834,
+      "true_row_accuracy": 0.7029471841260577,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.3256540713733405,
+      "negative_probability_mean": 0.07171415310101027
+    },
+    "last_100_step_objective_mean": 6.040325436592102,
+    "elapsed_seconds": 42.43310546899738
+  }
+}

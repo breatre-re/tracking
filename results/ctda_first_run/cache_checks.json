@@ -1,0 +1,17 @@
+{
+  "fit": {
+    "raw_pairs_recomputed": 3,
+    "features_labels_masks_match": true,
+    "blocks": 222133
+  },
+  "validation": {
+    "raw_pairs_recomputed": 3,
+    "features_labels_masks_match": true,
+    "blocks": 2494
+  },
+  "test": {
+    "raw_pairs_recomputed": 3,
+    "features_labels_masks_match": true,
+    "blocks": 26477
+  }
+}

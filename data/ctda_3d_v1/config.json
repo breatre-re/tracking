@@ -1,0 +1,81 @@
+{
+  "dataset_name": "ctda_3d_v1",
+  "status": "paper_parameter_based_candidate_with_explicit_assumptions",
+  "source_doi": "10.1016/j.ast.2025.111007",
+  "seed": 20261013,
+  "scene_count": 2000,
+  "training_pool_scenes": 1800,
+  "validation_scenes_within_training_pool": 180,
+  "diagnostic_crossing_scenes": 100,
+  "frames": 101,
+  "dt_seconds": 1.0,
+  "acceleration_refresh_frames": 10,
+  "initial_speed_mps": [
+    200.0,
+    1500.0
+  ],
+  "initial_pitch_rad": [
+    -1.5707963267948966,
+    1.5707963267948966
+  ],
+  "initial_yaw_rad": [
+    -1.5707963267948966,
+    1.5707963267948966
+  ],
+  "acceleration_mps2": [
+    0.0,
+    10.0
+  ],
+  "target_count": [
+    1,
+    25
+  ],
+  "initial_xyz_low_m": [
+    -100000.0,
+    -100000.0,
+    0.0
+  ],
+  "initial_xyz_high_m": [
+    100000.0,
+    100000.0,
+    100000.0
+  ],
+  "clutter_xyz_low_m": [
+    -200000.0,
+    -200000.0,
+    -150000.0
+  ],
+  "clutter_xyz_high_m": [
+    200000.0,
+    200000.0,
+    250000.0
+  ],
+  "max_abs_detection_xyz_m": 1000000.0,
+  "missing_rate": 0.1,
+  "clutter_poisson_mean": 20.0,
+  "measurement_noise_std_m": 1000.0,
+  "process_noise_covariance": "zero",
+  "noise_variants": [
+    "range_only",
+    "cartesian_xyz"
+  ],
+  "pairing": "measurement_to_measurement_adjacent_frames",
+  "rdf_bias_m": 1.0,
+  "partition_size": 40,
+  "gravity_mps2": 9.81,
+  "baseline_gate_m": 10000.0,
+  "baseline_validation_pair_stride": 10,
+  "crossing_diagnostic_time_window_seconds": [
+    40.0,
+    60.0
+  ],
+  "assumptions_not_reported_by_paper": [
+    "scene interpretation of 2000 trajectories; 101 frames and dt=1s",
+    "initial positions, uniform clutter volume, fixed target count per scene",
+    "piecewise constant Cartesian acceleration and gravity-compensated controls",
+    "Q=0; two alternative interpretations of the 1000m noise",
+    "adjacent measurement pairing rather than filter-prediction pairing",
+    "specific seed, validation subset, RDF bias and baseline gate",
+    "crossing diagnostic scenes are additional experiments, not the paper dataset"
+  ]
+}

@@ -1,13 +1,54 @@
-# Python bytecode and local tooling
+# Local tools, credentials and Python environments
+.agents/
+.codex/
+.aws/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.ipynb_checkpoints/
 .vscode/
 .idea/
+.DS_Store
+*.log
+*.tmp
+*.swp
 
-# Generated datasets and model binaries (metadata/manifests remain versioned)
+# Generated arrays, model weights and archives stay on the experiment server.
+# Small reports, configs, manifests, CSVs and scientific plots remain versioned.
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+**/cache/
+**/fixed_train_subset/
+reproduced/
+
+# Publisher paper and full-page derivatives remain local; cite the DOI instead.
+/references/*
+!/references/README.md
+/notes/figures/
+/notes/paper_extracted.txt
+/notes/environment_probe_cpu.json
+/notes/environment_probe_cuda.json
+
+# Historical workspace already on GitHub (preserve its existing ignore policy).
 mt_tracking_repro_transfer/data/datasets/**/*.npz
 mt_tracking_repro_transfer/models/**/*.pt
 mt_tracking_repro_transfer/models/**/*.pth
@@ -15,8 +56,6 @@ mt_tracking_repro_transfer/models/**/*.ckpt
 mt_tracking_repro_transfer/archive/**/*.npz
 mt_tracking_repro_transfer/archive/**/*.pt
 mt_tracking_repro_transfer/archive/**/*.pth
-
-# Generated plots and transient run logs
 mt_tracking_repro_transfer/outputs/**/*.png
 mt_tracking_repro_transfer/outputs/**/*.pdf
 mt_tracking_repro_transfer/**/*.log

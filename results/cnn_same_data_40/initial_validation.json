@@ -1,0 +1,13 @@
+{
+  "pairs_evaluated": 1800,
+  "accuracy_mean": 0.0776113225844281,
+  "positive_precision": 0.013955168545734548,
+  "positive_recall": 0.038588928026917615,
+  "positive_f1": 0.02049764025803569,
+  "true_row_accuracy": 0.038588928026917615,
+  "true_positive_edges": 19021,
+  "focal_loss_including_padding": 0.03572283000686022,
+  "focal_loss_valid_elements": 0.03634858301233417,
+  "accuracy_row_column_weighted": 0.0738733225510338,
+  "association_threshold": 0.2
+}

@@ -1,0 +1,48 @@
+{
+  "shared_configuration_checked": {
+    "data": "data/ctda_3d_v1",
+    "variant": "range_only",
+    "seed": 20261013,
+    "batch_size": 256,
+    "optimizer": "Adam",
+    "learning_rate": 0.0001,
+    "focal_alpha": 0.75,
+    "focal_gamma": 2,
+    "association_threshold": 0.2,
+    "training_loss_reduction": "mean of valid elements, padding excluded",
+    "loss_mode": "masked_focal",
+    "cache_root": "results/ctda_first_run/cache",
+    "epochs": 40
+  },
+  "cnn_audit": {
+    "raw_pair_cpu_reload": [
+      {
+        "scene_id": 22,
+        "frame": 0,
+        "maximum_probability_difference": 1.590792089700699e-05,
+        "truth_identical": true,
+        "matching_identical": true
+      },
+      {
+        "scene_id": 22,
+        "frame": 1,
+        "maximum_probability_difference": 9.479932487010956e-06,
+        "truth_identical": true,
+        "matching_identical": true
+      },
+      {
+        "scene_id": 22,
+        "frame": 2,
+        "maximum_probability_difference": 1.379847526550293e-05,
+        "truth_identical": true,
+        "matching_identical": true
+      }
+    ],
+    "adam_final_step": 34720,
+    "source_snapshot_hashes_match": true,
+    "cpu_gpu_tolerance": 0.001,
+    "note": "Same float32 tensor dtype; CUDA convolutions use framework-default cuDNN TF32 permission"
+  },
+  "cnn_minus_ctda_40_accuracy_pp": 2.327754278503691,
+  "cnn_minus_ctda_40_f1_pp": 3.6888247766896365
+}

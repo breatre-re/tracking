@@ -1,0 +1,18 @@
+{
+  "model_loaded_strictly": true,
+  "optimizer_states_restored": 512,
+  "optimizer_step_restored": 17360,
+  "original_validation_differences": {
+    "accuracy_mean": 0.0,
+    "positive_precision": 0.0,
+    "positive_recall": 0.0,
+    "positive_f1": 0.0,
+    "focal_loss_valid_elements": 0.0
+  },
+  "batch_size": 256,
+  "steps_per_epoch": 868,
+  "optimizer_learning_rates": [
+    0.0001
+  ],
+  "padding_excluded_from_loss": true
+}

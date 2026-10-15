@@ -1,0 +1,114 @@
+{
+  "data_audit": {
+    "scenes_read_back_and_checked": 2000,
+    "eq1_max_error": 8.881784197001252e-15,
+    "coordinate_roundtrip_max_error_m": 5.820766091346741e-11,
+    "eligible_detections": 2655492,
+    "detections": 2389636,
+    "clutter_total": 4035008,
+    "frames": 202000,
+    "range_noise_count": 2389636,
+    "range_noise_sum": 3198271.0517141726,
+    "range_noise_sum2": 2392729502222.683,
+    "cartesian_noise_count": 2389636,
+    "cartesian_noise_sum": [
+      1452927.9741950617,
+      1691556.29610758,
+      2321780.2311976906
+    ],
+    "cartesian_noise_sum2": [
+      2386558248326.355,
+      2390751892863.4883,
+      2389592552963.6133
+    ],
+    "negative_noisy_ranges": 0,
+    "outside_detection_range_states": 0,
+    "target_count_min": 1,
+    "target_count_max": 25,
+    "target_count_sum": 26292,
+    "pairs": 200000,
+    "positive_edges": 2129273,
+    "empty_positive_pairs": 1891,
+    "max_frame_observations": 63,
+    "target_count_mean": 13.146,
+    "missing_rate_observed": 0.10011553414583818,
+    "clutter_mean_observed": 19.97528712871287,
+    "range_noise_mean_m": 1.338392563434001,
+    "range_noise_std_m": 1000.6461703625795,
+    "cartesian_noise_mean_xyz_m": [
+      0.6080122555046299,
+      0.7078719504173774,
+      0.971604140211183
+    ],
+    "cartesian_noise_std_xyz_m": [
+      999.3556283710396,
+      1000.2332082156694,
+      999.9904372242894
+    ],
+    "data_checks_passed": true
+  },
+  "distance_baseline": {
+    "validation": {
+      "range_only": {
+        "pairs_evaluated": 1800,
+        "accuracy_mean": 0.9989032415131851,
+        "positive_precision": 0.9969072705351995,
+        "positive_recall": 0.999842279585721,
+        "positive_f1": 0.998372617985196,
+        "true_row_accuracy": 0.999842279585721,
+        "true_positive_edges": 19021
+      },
+      "cartesian_xyz": {
+        "pairs_evaluated": 1800,
+        "accuracy_mean": 0.9989663997394385,
+        "positive_precision": 0.9970121088221419,
+        "positive_recall": 0.9999474265285737,
+        "positive_f1": 0.9984776103732479,
+        "true_row_accuracy": 0.9999474265285737,
+        "true_positive_edges": 19021
+      }
+    },
+    "crossing_diagnostic": {
+      "range_only": {
+        "pairs_evaluated": 2100,
+        "accuracy_mean": 0.2751652879144752,
+        "positive_precision": 0.22575261674065913,
+        "positive_recall": 0.6208171813037473,
+        "positive_f1": 0.3311034802343128,
+        "true_row_accuracy": 0.6208171813037473,
+        "true_positive_edges": 22443
+      },
+      "cartesian_xyz": {
+        "pairs_evaluated": 2100,
+        "accuracy_mean": 0.20914064682214262,
+        "positive_precision": 0.15460259858082492,
+        "positive_recall": 0.4252105333511563,
+        "positive_f1": 0.2267580700733049,
+        "true_row_accuracy": 0.4252105333511563,
+        "true_positive_edges": 22443
+      }
+    }
+  },
+  "all_zero_baseline": {
+    "validation": {
+      "pairs_evaluated": 1800,
+      "accuracy_mean": 0.6909074067745525,
+      "positive_precision": 0.0,
+      "positive_recall": 0.0,
+      "positive_f1": 0.0,
+      "true_row_accuracy": 0.0,
+      "true_positive_edges": 19021
+    },
+    "crossing_diagnostic": {
+      "pairs_evaluated": 2100,
+      "accuracy_mean": 0.6865145595044894,
+      "positive_precision": 0.0,
+      "positive_recall": 0.0,
+      "positive_f1": 0.0,
+      "true_row_accuracy": 0.0,
+      "true_positive_edges": 22443
+    }
+  },
+  "test_set_performance_evaluated": false,
+  "baseline_note": "Fixed 10000m gate, distance partial assignment; validation and added crossing diagnostic only. Not CTDA results."
+}

@@ -1,0 +1,36 @@
+{
+  "E_residual_masked": {
+    "objective": "masked_focal",
+    "channel_residuals": true,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.6767968766275649,
+      "positive_precision": 0.4872894333843798,
+      "positive_recall": 0.9285088999124599,
+      "positive_f1": 0.6391483378527669,
+      "true_row_accuracy": 0.9285088999124599,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.7125710143982442,
+      "negative_probability_mean": 0.08894598466181299
+    },
+    "last_100_step_objective_mean": 0.0017794206680264324,
+    "elapsed_seconds": 36.286804006998864
+  },
+  "F_residual_balanced_structure": {
+    "objective": "balanced_structured",
+    "channel_residuals": true,
+    "validation": {
+      "pairs_evaluated": 320,
+      "accuracy_mean": 0.6353882519269746,
+      "positive_precision": 0.44733779458830375,
+      "positive_recall": 0.8972862562007586,
+      "positive_f1": 0.5970294146199399,
+      "true_row_accuracy": 0.8972862562007586,
+      "true_positive_edges": 3427,
+      "positive_probability_mean": 0.8721129149328977,
+      "negative_probability_mean": 0.0901391171768437
+    },
+    "last_100_step_objective_mean": 0.35967393428087235,
+    "elapsed_seconds": 37.896073674000945
+  }
+}
